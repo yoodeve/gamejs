@@ -9,7 +9,7 @@ const Portfolio = () => {
   }
   return (
     <div>
-      <div className='divname' onClick={()=>{dropDownClicked()}}>포트폴리오</div>
+      <div className='divname' onMouseOver={()=>{dropDownClicked()}}>포트폴리오</div>
     </div>
   );
 };

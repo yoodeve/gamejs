@@ -14,6 +14,7 @@ const Main = () => {
       <Gradient />
       <IMG src={back} />
       <InDiv />
+      <Realtive>
       <Flex>
         <Introduction />
         <Service />
@@ -21,6 +22,7 @@ const Main = () => {
         <Requestion />
         <Hire />
       </Flex>
+      </Realtive>
     </>
   );
 };
@@ -41,12 +43,16 @@ const InDiv = styled.div`
   background-repeat: no-repeat;
 `;
 
+const Realtive = styled.div`
+position: relative;
+`
+
 const Flex = styled.div`
 position: fixed;
 bottom: 0;
-left: 296px;
+left: 50%;
 display: flex;
-align-items: center;
+transform: translateX( -50% );
 `
 
 export default Main;
