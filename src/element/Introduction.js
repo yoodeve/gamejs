@@ -3,7 +3,6 @@ import '../css/toggle.css'
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   const dropDownClicked = () => {
     setIsOpen(!isOpen)
   }
