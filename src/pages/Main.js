@@ -7,25 +7,35 @@ import Portfolio from "../element/Portfolio";
 import Requestion from "../element/Requestion";
 import Hire from "../element/Hire";
 import back from "../image/back.png";
+import logo from "../image/logo.png";
 
 const Main = () => {
   return (
     <>
+      <LogoDiv src={logo} />
       <Gradient />
       <IMG src={back} />
       <InDiv />
       <Realtive>
-      <Flex>
-        <Introduction />
-        <Service />
-        <Portfolio />
-        <Requestion />
-        <Hire />
-      </Flex>
+        <Flex>
+          <Introduction />
+          <Service />
+          <Portfolio />
+          <Requestion />
+          <Hire />
+        </Flex>
       </Realtive>
     </>
   );
 };
+
+const LogoDiv = styled.div`
+  height: 54px;
+  width: 220.87px;
+  margin: 30px;
+  background-image: url("${(props) => props.src}");
+`;
+
 const IMG = styled.div`
   z-index: -1;
   display: flex;
@@ -44,15 +54,15 @@ const InDiv = styled.div`
 `;
 
 const Realtive = styled.div`
-position: relative;
-`
+  position: relative;
+`;
 
 const Flex = styled.div`
-position: fixed;
-bottom: 0;
-left: 50%;
-display: flex;
-transform: translateX( -50% );
-`
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  display: flex;
+  transform: translateX(-50%);
+`;
 
 export default Main;
