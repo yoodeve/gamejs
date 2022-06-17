@@ -9,7 +9,7 @@ const Hire = () => {
   }
   return (
     <div>
-      <div className='divname' onClick={()=>{dropDownClicked()}}>인재 채용</div>
+      <div className='divname' onMouseOver={()=>{dropDownClicked()}}>인재 채용</div>
       <ul className={`dropdownList ${isOpen ? '' : 'hidden'}`}>
         <li className='list-tag'>CEO 인사말</li>
         <li className='list-tag'>연혁</li>
