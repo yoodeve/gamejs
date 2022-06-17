@@ -1,0 +1,24 @@
+.divname {
+  margin: 20px;
+  border-top: 1px solid #ffffff;
+  width: 200px;
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+}
+
+.list-tag {
+  color: #ffffff;
+  list-style: none;
+  background-color: #3180f1;
+}
+
+.hidden {
+  height: 0;
+  overflow: hidden;
+}
+
+.dropdownList {
+  max-height: 100px;
+  transition: max-height 200ms ease-in-out;
+}
