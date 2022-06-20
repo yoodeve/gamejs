@@ -14,7 +14,7 @@ const Dropdown = (props) => {
     } else { //dropXXX가 false일 때
       setRepeat(setTimeout(() => {
           setDropAnimation(false);
-        },10000));
+        },400));
     }
   }, [props.drop]);
   return ( 

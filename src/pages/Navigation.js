@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import Dropdown from "../element/Dropdown";
 import "../css/toggle.css";
+import { useNavigate } from "react-router-dom";
 
 const Navigation = () => {
+  const history = useNavigate();
   const [dropIntro, setDropIntro] = useState(false);
   const [dropServ, setDropServe] = useState(false);
   const [dropPort, setDropPort] = useState(false);
@@ -14,13 +16,23 @@ const Navigation = () => {
       <div className="mainNavAuto">
         <div
           className="mainNavTxt"
-          onMouseEnter={() => {setDropIntro(!dropIntro);}}
-          onMouseLeave={() => {setDropIntro(!dropIntro);}}
+          onMouseEnter={() => {
+            setDropIntro(!dropIntro);
+          }}
+          onMouseLeave={() => {
+            setDropIntro(!dropIntro);
+          }}
         >
           <div>회사 소개</div>
           <Dropdown drop={dropIntro}>
             <ul>
-              <li>CEO 인사말</li>
+              <li
+                onClick={() => {
+                  window.location.pathname = "/greeting";
+                }}
+              >
+                CEO 인사말
+              </li>
               <li>연혁</li>
               <li>조직도</li>
               <li>CI 소개</li>
