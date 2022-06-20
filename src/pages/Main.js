@@ -1,13 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import Gradient from "../element/Gradient";
-import Introduction from "../element/Introduction";
-import Service from "../element/Service";
-import Portfolio from "../element/Portfolio";
-import Requestion from "../element/Requestion";
-import Hire from "../element/Hire";
+
 import back from "../image/back.png";
 import logo from "../image/logo.png";
+import Navigation from "./Navigation";
 
 const Main = () => {
   return (
@@ -15,16 +12,9 @@ const Main = () => {
       <LogoDiv src={logo} />
       <Gradient />
       <IMG src={back} />
-      <InDiv />
-      <Realtive>
-        <Flex>
-          <Introduction />
-          <Service />
-          <Portfolio />
-          <Requestion />
-          <Hire />
-        </Flex>
-      </Realtive>
+      <NavWrapper>
+        <Navigation />
+      </NavWrapper>
     </>
   );
 };
@@ -46,23 +36,10 @@ const IMG = styled.div`
   bottom: 0;
 `;
 
-const InDiv = styled.div`
-  margin: 0 auto;
-  overflow: hidden;
-  background-size: contain;
-  background-repeat: no-repeat;
-`;
-
-const Realtive = styled.div`
-  position: relative;
-`;
-
-const Flex = styled.div`
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  display: flex;
-  transform: translateX(-50%);
-`;
+const NavWrapper = styled.div`
+width: 100vw;
+bottom: 0;
+position: fixed;
+`
 
 export default Main;
