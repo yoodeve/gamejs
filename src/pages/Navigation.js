@@ -12,7 +12,11 @@ const Navigation = () => {
   return (
     <div className="main-nav-display">
       <div className="mainNavAuto">
-        <div className="mainNavTxt" onClick={() => setDropIntro(!dropIntro)}>
+        <div
+          className="mainNavTxt"
+          onMouseEnter={() => {setDropIntro(!dropIntro);}}
+          onMouseLeave={() => {setDropIntro(!dropIntro);}}
+        >
           <div>회사 소개</div>
           <Dropdown drop={dropIntro}>
             <ul>
@@ -25,8 +29,12 @@ const Navigation = () => {
           </Dropdown>
         </div>
 
-        <div className="mainNavTxt" onMouseOver={() => setDropServe(!dropServ)}>
-          서비스
+        <div
+          className="mainNavTxt"
+          onMouseEnter={() => setDropServe(!dropServ)}
+          onMouseLeave={() => setDropServe(!dropServ)}
+        >
+          <div>서비스</div>
           <Dropdown drop={dropServ}>
             <ul>
               <li>웹개발</li>
@@ -37,10 +45,10 @@ const Navigation = () => {
 
         <div
           className="mainNavTxt"
-          onMouseOver={() => setDropPort(!dropPort)}
-        //   onMouseOut={() => setDropPort(!dropPort)}
+          onMouseEnter={() => setDropPort(!dropPort)}
+          onMouseLeave={() => setDropPort(!dropPort)}
         >
-          포트폴리오
+          <div>포트폴리오</div>
           <Dropdown drop={dropPort}>
             <ul>
               <li>포트폴리오</li>
@@ -49,10 +57,10 @@ const Navigation = () => {
         </div>
         <div
           className="mainNavTxt"
-          onMouseOver={() => setDropReq(!dropReq)}
-        //   onMouseOut={() => setDropReq(!dropReq)}
+          onMouseEnter={() => setDropReq(!dropReq)}
+          onMouseLeave={() => setDropReq(!dropReq)}
         >
-          문의 &amp; 의뢰
+          <div>문의 &amp; 의뢰</div>
           <Dropdown drop={dropReq}>
             <ul>
               <li>CEO 인사말</li>
@@ -63,10 +71,10 @@ const Navigation = () => {
         </div>
         <div
           className="mainNavTxt"
-          onMouseOver={() => setDropHire(!dropHire)}
+          onMouseEnter={() => setDropHire(!dropHire)}
           onMouseLeave={() => setDropHire(!dropHire)}
         >
-          인재 채용
+          <div>인재 채용</div>
           <Dropdown drop={dropHire}>
             <ul>
               <li>CEO 인사말</li>
