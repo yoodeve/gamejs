@@ -28,6 +28,7 @@ const Header = () => {
           beginLinear="0%"
           endLinear="100%"
         >
+          <ListWrap>
           <ListParent>
             <List>CEO 인삿말</List>
             <List>연혁</List>
@@ -35,6 +36,7 @@ const Header = () => {
             <List>CI 소개</List>
             <List>찾아오시는 길</List>
           </ListParent>
+          </ListWrap>
         </Gradient>
       </IMG>
     </>
@@ -66,10 +68,16 @@ color: #fff;
 list-style: none;
 display: inline-flex;
 line-height: 100px;
+padding: 0 800px 0 0;
 `
 
 const List = styled.li`
 margin: 0 20px;
+`
+const ListWrap = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
 `
 
 export default Header;

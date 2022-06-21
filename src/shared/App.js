@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter,Routes,Route } from "react-router-dom";
+import FindWay from "../pages/FindWay";
 import Hello from "../pages/Hello";
 import History from "../pages/History";
 import Main from "../pages/Main";
@@ -13,8 +14,8 @@ const App = () => {
         <Route path="/intro/greeting" element={<Hello />} />
         <Route path="/intro/history" element={<History />} />
         {/* <Route path="/intro/officetree" element={<History />} />
-        <Route path="/intro/introduction" element={<History />} />
-        <Route path="/intro/map" element={<History />} /> */}
+        <Route path="/intro/introduction" element={<History />} /> */}
+        <Route path="/intro/map" element={<FindWay />} />
         </Routes>
     </BrowserRouter>
   );
