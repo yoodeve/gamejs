@@ -1,8 +1,14 @@
 import React, { useState } from "react";
 import Dropdown from "../element/Dropdown";
 import "../css/toggle.css";
+import styled from "styled-components";
 
-const Navigation = () => {
+const Navigation = (props) => {
+  const {absolute} = props;
+
+  const styles = {
+    absolute };
+
   const [dropIntro, setDropIntro] = useState(false);
   const [dropServ, setDropServe] = useState(false);
   const [dropPort, setDropPort] = useState(false);
@@ -10,6 +16,7 @@ const Navigation = () => {
   const [dropHire, setDropHire] = useState(false);
 
   return (
+    <Wrap {...styles}>
     <div className="main-nav-display">
       <div className="mainNavAuto">
         <div
@@ -110,7 +117,15 @@ const Navigation = () => {
         </div>
       </div>
     </div>
+    </Wrap>
   );
 };
+
+const Wrap = styled.div`
+${(props) =>
+    props.absolute
+      ? `justifyContent:center;`
+      : ""}
+`
 
 export default Navigation;
