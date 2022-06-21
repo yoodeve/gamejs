@@ -18,6 +18,7 @@
 
 .slide-fade-in-dropdown > ul > li {
   animation: slide-fade-in-dropdown-animation 0.4s ease;
+  cursor: pointer;
 }
 
 /* fade out */
@@ -39,6 +40,7 @@
 .slide-fade-out-dropdown > ul > li {
   animation: slide-fade-out-dropdown-animation 0.4s ease;
   animation-fill-mode: backwards;
+  cursor: pointer;
 }
 
 .mainNavAuto {
