@@ -13,10 +13,10 @@
   overflow: hidden;
   width: inherit;
   position: absolute;
-  bottom: 0;
+  top: 0;
 }
 
-.slide-fade-in-dropdown > ul > li {
+.slide-fade-in-dropdown > ul  {
   animation: slide-fade-in-dropdown-animation 0.4s ease;
   cursor: pointer;
 }
@@ -35,17 +35,19 @@
 
 .slide-fade-out-dropdown {
   overflow: hidden;
+  width: inherit;
+  position: absolute;
+  top: 0;
 }
 
-.slide-fade-out-dropdown > ul > li {
+.slide-fade-out-dropdown > ul {
   animation: slide-fade-out-dropdown-animation 0.4s ease;
-  animation-fill-mode: backwards;
+  animation-fill-mode: forwards;
   cursor: pointer;
 }
 
 .mainNavAuto {
-  margin: 0 auto;
-  bottom: 0;
+  top: 0;
   display: flex;
   justify-content: center;
 }
@@ -54,9 +56,13 @@
   color: #fff;
   width: 200px;
   height: 48px;
-  border-top: 1px solid #fff;
+  /* border-top: 1px solid #fff; */
   margin: 20px;
   text-align: center;
+}
+
+.list-head {
+  font-weight: 700;
 }
 
 .components-dropdown > ul {

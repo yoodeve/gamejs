@@ -9,22 +9,38 @@ import Navigation from "./Navigation";
 const Main = () => {
   return (
     <>
-      <Gradient
-        transform="180"
-        height="296px"
-        top="0"
-        beginLinear="0%"
-        endLinear="100%"
-      />
-      <LogoDiv src={logo} />
-      <Gradient bottom="0" height="296px" beginLinear="0%" endLinear="100%" />
-      <IMG src={back} />
-      <NavWrapper>
-        <Navigation />
-      </NavWrapper>
+      <MainWrap>
+        <TopGrad>
+          <LogoDiv src={logo} />
+          <Navigation absolute />
+        </TopGrad>
+
+        <IMG src={back} />
+        <Gradient
+        position="absolute"
+          margin="auto"
+          bottom="0"
+          height="296px"
+          beginLinear="0%"
+          endLinear="100%"
+        />
+      </MainWrap>
     </>
   );
 };
+
+const MainWrap = styled.div`
+  width: 100vw;
+  height: 100vh;
+`;
+
+const TopGrad = styled.div`
+  width: 100vw;
+  height: 296px;
+  /* position: absolute; */
+  top: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+`;
 
 const LogoDiv = styled.div`
   height: 54px;
@@ -33,16 +49,18 @@ const LogoDiv = styled.div`
   background-image: url("${(props) => props.src}");
   z-index: 1;
   position: absolute;
+  top: 0;
 `;
 
-const IMG = styled.div`
+const IMG = styled.img`
   z-index: -1;
   display: flex;
   background-image: url("${(props) => props.src}");
-  width: 100vw;
-  height: 100vh;
+  /* width: 100vw; */
+  /* height: 100vh; */
   position: fixed;
-  bottom: 0;
+  top: 0;
+  background-repeat: no-repeat;
 `;
 
 const NavWrapper = styled.div`

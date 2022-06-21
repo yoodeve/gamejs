@@ -2,7 +2,18 @@ import React from "react";
 import styled from "styled-components";
 
 const Gradient = (props) => {
-  const { beginLinear, endLinear, top, bottom, transform, width, height, children, margin } = props;
+  const {
+    beginLinear,
+    endLinear,
+    top,
+    bottom,
+    transform,
+    width,
+    height,
+    children,
+    margin,
+    position,
+  } = props;
 
   const styles = {
     beginLinear,
@@ -13,6 +24,7 @@ const Gradient = (props) => {
     width,
     height,
     margin,
+    position,
   };
 
   return (
@@ -23,8 +35,8 @@ const Gradient = (props) => {
 };
 
 const Grad = styled.div`
+  position: ${(props) => (props.position ? `${props.position};` : "")};
   margin-top: ${(props) => (props.margin ? `${props.margin};` : "")};
-  /* position: absolute; */
   bottom: ${(props) => (props.bottom ? `${props.bottom};` : "")};
   top: ${(props) => (props.top ? `${props.top};` : "")};
   width: ${(props) => (props.width ? `${props.width}px;` : "100vw")};
