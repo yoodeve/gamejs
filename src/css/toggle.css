@@ -1,25 +1,109 @@
-.divname {
-  border-top: 1px solid #ffffff;
+/* fade in */
+@keyframes slide-fade-in-dropdown-animation {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.slide-fade-in-dropdown {
+  overflow: hidden;
+  width: inherit;
+  position: absolute;
+  /* top: 0; */
+}
+
+.slide-fade-in-dropdown > ul  {
+  animation: slide-fade-in-dropdown-animation 0.4s ease;
+  cursor: pointer;
+}
+
+/* fade out */
+
+@keyframes slide-fade-out-dropdown-animation {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.slide-fade-out-dropdown {
+  overflow: hidden;
+  width: inherit;
+  /* position: absolute; */
+  /* top: 0; */
+}
+
+.slide-fade-out-dropdown > ul {
+  animation: slide-fade-out-dropdown-animation 0.4s ease;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+}
+
+.mainNavAuto {
+  top: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.for-hover {
+  width: inherit;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+}
+
+.mainNavTxt:hover .for-hover {
+  width: inherit;
+  padding: 5px 0;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  background-color: #0052C7;
+  transition: all 0.2s linear;
+}
+
+.mainNavTxt {
+  color: #fff;
   width: 200px;
+  height: 48px;
+  margin: 20px;
   text-align: center;
-  color: #ffffff;
-  position: relative;
-  margin: 0 30px;
 }
 
-
-.hidden {
-    height: 0;
-    overflow: hidden;
+.list-head {
+  font-weight: 700;
 }
 
-.dropdownList {
-    max-height: 100px;
-    transition: max-height 2s ease-in-out;
+.components-dropdown > ul {
+  margin: 0;
+  padding: 0;
 }
 
-.list-tag {
-  color: #ffffff;
+.components-dropdown > ul > li {
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  padding-top: 5px;
   list-style: none;
   background-color: #3180f1;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  transition: all 0.2s linear;
+}
+
+
+.components-dropdown > ul > li:hover {
+  background: #2872DD;
 }

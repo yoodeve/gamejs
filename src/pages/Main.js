@@ -1,58 +1,72 @@
 import React from "react";
 import styled from "styled-components";
 import Gradient from "../element/Gradient";
-import Introduction from "../element/Introduction";
-import Service from "../element/Service";
-import Portfolio from "../element/Portfolio";
-import Requestion from "../element/Requestion";
-import Hire from "../element/Hire";
+
 import back from "../image/back.png";
+import logo from "../image/logo.png";
+import Navigation from "./Navigation";
 
 const Main = () => {
   return (
     <>
-      <Gradient />
-      <IMG src={back} />
-      <InDiv />
-      <Realtive>
-      <Flex>
-        <Introduction />
-        <Service />
-        <Portfolio />
-        <Requestion />
-        <Hire />
-      </Flex>
-      </Realtive>
+      <MainWrap>
+        <TopGrad>
+          <LogoDiv src={logo} />
+          <Navigation absolute />
+        </TopGrad>
+
+        <IMG src={back} />
+        <Gradient
+        position="absolute"
+          margin="auto"
+          bottom="0"
+          height="296px"
+          beginLinear="0%"
+          endLinear="100%"
+        />
+      </MainWrap>
     </>
   );
 };
-const IMG = styled.div`
+
+const MainWrap = styled.div`
+  width: 100vw;
+  height: 100vh;
+`;
+
+const TopGrad = styled.div`
+  width: 100vw;
+  height: 296px;
+  /* position: absolute; */
+  top: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+`;
+
+const LogoDiv = styled.div`
+  height: 54px;
+  width: 220.87px;
+  margin: 30px;
+  background-image: url("${(props) => props.src}");
+  z-index: 1;
+  position: absolute;
+  top: 0;
+`;
+
+const IMG = styled.img`
   z-index: -1;
   display: flex;
   background-image: url("${(props) => props.src}");
-  width: 100%;
-  height: 100vh;
+  /* width: 100vw; */
+  /* height: 100vh; */
   position: fixed;
-  bottom: 0;
-`;
-
-const InDiv = styled.div`
-  margin: 0 auto;
-  overflow: hidden;
-  background-size: contain;
+  top: 0;
   background-repeat: no-repeat;
 `;
 
-const Realtive = styled.div`
-position: relative;
-`
-
-const Flex = styled.div`
-position: fixed;
-bottom: 0;
-left: 50%;
-display: flex;
-transform: translateX( -50% );
-`
+const NavWrapper = styled.div`
+  width: 100vw;
+  bottom: 0;
+  position: fixed;
+`;
 
 export default Main;
