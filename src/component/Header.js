@@ -100,21 +100,25 @@ const ListParent = styled.ul`
   list-style: none;
   display: inline-flex;
   /* line-height: 100px; */
-  padding: 0 800px 0 0;
-`;
+  padding: 44px 400px 0 0;
+  `;
 
 const List = styled.li`
-  padding: 0px 20px 10px 20px;
+  padding: 0px 20px 0px 20px;
   margin: 0px 20px;
-  padding-top: 50px;
+  /* padding-top: 50px; */
   border-bottom: 4px solid #3180f1;
+  font-family: ibmBold;
+  font-size: 20px;
 `;
 
 const ListNone = styled.li`
   padding: 0px 20px 10px 20px;
   margin: 0px 20px;
-  padding-top: 50px;
+  /* padding-top: 50px; */
   cursor: pointer;
+  font-family: ibmBold;
+  font-size: 20px;
 `;
 
 const ListWrap = styled.div`

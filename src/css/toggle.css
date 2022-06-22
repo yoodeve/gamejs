@@ -8,6 +8,10 @@
     transform: translateY(0);
   }
 }
+.for-hover {
+  font-family: ibmBold;
+  font-size: 18px;
+}
 
 .slide-fade-in-dropdown {
   overflow: hidden;
@@ -47,23 +51,21 @@
 }
 
 .mainNavAuto {
-  top: 0;
   display: flex;
   justify-content: center;
+  padding-top: 10px;
 }
 
 .for-hover {
-  width: inherit;
-  height: 30px;
-  line-height: 30px;
+  /* line-height: 30px; */
   color: #fff;
 }
 
 .mainNavTxt:hover .for-hover {
   width: inherit;
-  padding: 5px 0;
+  /* padding: 5px 0; */
   height: 30px;
-  line-height: 30px;
+  /* line-height: 30px; */
   color: #fff;
   font-size: 18px;
   font-weight: 600;
@@ -77,7 +79,7 @@
   color: #fff;
   width: 200px;
   height: 48px;
-  margin: 20px;
+  /* margin: 20px; */
   text-align: center;
 }
 

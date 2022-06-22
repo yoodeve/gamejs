@@ -140,7 +140,8 @@ const Navigation = (props) => {
 };
 
 const Wrap = styled.div`
-  ${(props) => (props.absolute ? `justifyContent:center;` : "")}
+  ${(props) => (props.absolute ? `justify-content:center;` : "")}
+  
 `;
 
 export default Navigation;

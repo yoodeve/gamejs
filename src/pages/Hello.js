@@ -2,17 +2,16 @@ import React from "react";
 import styled from "styled-components";
 
 import Header from "../component/Header";
-import Body from "../element/Body";
 import Footer from "../element/Footer";
-import greetingImg from "../image/GreetingImg.png";
 import introImg from "../image/SloganImg.png";
+import building from "../image/GreetingImg.png";
 
 const Hello = () => {
   return (
     <>
       <Header />
-      <Body>
-        <PWrapper>
+      <PWrapper src={building}>
+        <BuildingImg>
           <PBody>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
             aliquam est sit amet malesuada mollis. Cras id orci vitae risus
@@ -43,23 +42,35 @@ const Hello = () => {
             quis nisl vestibulum bibendum sed nec lorem. Interdum et malesuada
             fames ac ante ipsum primis in faucibus.
           </PBody>
-        </PWrapper>
-        <CEOImg src={introImg} />
-      </Body>
-      <img src={greetingImg} />
+          <CEOImg src={introImg} />
+        </BuildingImg>
+      </PWrapper>
       <Footer />
     </>
   );
 };
 
-const CEOImg = styled.img``;
-
 const PWrapper = styled.div`
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
+  background-image: url("${(props) => props.src}");
+  height: 100vh;
+  background-repeat: no-repeat;
 `;
 const PBody = styled.p`
   width: 25vw;
+  margin-right: 50px;
+`;
+const CEOImg = styled.img`
+  margin-left: 40px;
+`;
+
+const BuildingImg = styled.div`
+  /* width: 100vw; */
+
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
 `;
 
 // greeting:building
