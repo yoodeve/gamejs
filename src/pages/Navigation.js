@@ -29,10 +29,10 @@ const Navigation = (props) => {
               setDropIntro(!dropIntro);
             }}
           >
-            회사 소개
+            <div className="for-hover">회사 소개</div>
             <Dropdown drop={dropIntro}>
               <ul>
-                <li className="list-head">회사 소개</li>
+                {/* <li className="list-head">회사 소개</li> */}
                 <li
                   onClick={() => {
                     window.location.pathname = "/intro/greeting";
@@ -77,7 +77,7 @@ const Navigation = (props) => {
             onMouseEnter={() => setDropServe(!dropServ)}
             onMouseLeave={() => setDropServe(!dropServ)}
           >
-            <div>서비스</div>
+            <div className="for-hover">서비스</div>
             <Dropdown drop={dropServ}>
               <ul>
                 <li className="list-head">서비스</li>
@@ -92,7 +92,7 @@ const Navigation = (props) => {
             onMouseEnter={() => setDropPort(!dropPort)}
             onMouseLeave={() => setDropPort(!dropPort)}
           >
-            <div>포트폴리오</div>
+            <div className="for-hover">포트폴리오</div>
             <Dropdown drop={dropPort}>
               <ul>
                 <li className="list-head">포트폴리오</li>
@@ -105,7 +105,7 @@ const Navigation = (props) => {
             onMouseEnter={() => setDropReq(!dropReq)}
             onMouseLeave={() => setDropReq(!dropReq)}
           >
-            <div>문의 &amp; 의뢰</div>
+            <div className="for-hover">문의 &amp; 의뢰</div>
             <Dropdown drop={dropReq}>
               <ul>
                 <li className="list-head">문의 &amp; 의뢰</li>
@@ -120,7 +120,7 @@ const Navigation = (props) => {
             onMouseEnter={() => setDropHire(!dropHire)}
             onMouseLeave={() => setDropHire(!dropHire)}
           >
-            <div>인재 채용</div>
+            <div className="for-hover">인재 채용</div>
             <Dropdown drop={dropHire}>
               <ul>
                 <li className="list-head">인재 채용</li>

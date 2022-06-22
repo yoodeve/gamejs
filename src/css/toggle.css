@@ -13,7 +13,7 @@
   overflow: hidden;
   width: inherit;
   position: absolute;
-  top: 0;
+  /* top: 0; */
 }
 
 .slide-fade-in-dropdown > ul  {
@@ -36,8 +36,8 @@
 .slide-fade-out-dropdown {
   overflow: hidden;
   width: inherit;
-  position: absolute;
-  top: 0;
+  /* position: absolute; */
+  /* top: 0; */
 }
 
 .slide-fade-out-dropdown > ul {
@@ -52,11 +52,31 @@
   justify-content: center;
 }
 
+.for-hover {
+  width: inherit;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+}
+
+.mainNavTxt:hover .for-hover {
+  width: inherit;
+  padding: 5px 0;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  background-color: #3180f1;
+  transition: all 0.2s linear;
+}
+
 .mainNavTxt {
   color: #fff;
   width: 200px;
   height: 48px;
-  /* border-top: 1px solid #fff; */
   margin: 20px;
   text-align: center;
 }
@@ -80,6 +100,7 @@
   text-align: center;
   margin: 0;
   padding: 0;
+  transition: all 0.2s linear;
 }
 
 
