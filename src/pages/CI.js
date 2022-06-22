@@ -74,7 +74,6 @@ const Display = styled.div`
 `;
 
 const H3 = styled.p`
-  /* margin: 0 auto; */
   text-align: left;
   font-size: 30px;
   font-weight: 700;
