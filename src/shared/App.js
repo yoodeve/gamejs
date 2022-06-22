@@ -16,7 +16,7 @@ const App = () => {
         <Route path="/intro/greeting" element={<Hello />} />
         <Route path="/intro/history" element={<History />} />
         <Route path="/intro/officetree" element={<Tree />} />
-        <Route path="/intro/introduction" element={<CI />} />
+        <Route path="/intro/CIintro" element={<CI />} />
         <Route path="/intro/map" element={<FindWay />} />
         </Routes>
     </BrowserRouter>

@@ -56,7 +56,7 @@ const Navigation = (props) => {
                 </li>
                 <li
                   onClick={() => {
-                    window.location.pathname = "/intro/introduction";
+                    window.location.pathname = "/intro/CIintro";
                   }}
                 >
                   CI 소개
@@ -80,7 +80,7 @@ const Navigation = (props) => {
             <div>서비스</div>
             <Dropdown drop={dropServ}>
               <ul>
-              <li className="list-head">서비스</li>
+                <li className="list-head">서비스</li>
                 <li>웹개발</li>
                 <li>App 개발</li>
               </ul>
@@ -95,7 +95,7 @@ const Navigation = (props) => {
             <div>포트폴리오</div>
             <Dropdown drop={dropPort}>
               <ul>
-              <li className="list-head">포트폴리오</li>
+                <li className="list-head">포트폴리오</li>
                 <li>포트폴리오</li>
               </ul>
             </Dropdown>
@@ -108,7 +108,7 @@ const Navigation = (props) => {
             <div>문의 &amp; 의뢰</div>
             <Dropdown drop={dropReq}>
               <ul>
-              <li className="list-head">문의 &amp; 의뢰</li>
+                <li className="list-head">문의 &amp; 의뢰</li>
                 <li>CEO 인사말</li>
                 <li>연혁</li>
                 <li>조직도</li>
@@ -123,7 +123,7 @@ const Navigation = (props) => {
             <div>인재 채용</div>
             <Dropdown drop={dropHire}>
               <ul>
-              <li className="list-head">인재 채용</li>
+                <li className="list-head">인재 채용</li>
                 <li>CEO 인사말</li>
                 <li>연혁</li>
                 <li>조직도</li>

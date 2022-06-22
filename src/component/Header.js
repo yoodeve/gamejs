@@ -1,4 +1,7 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { history } from "../modules/configStore";
+
 import styled from "styled-components";
 
 import headerimg1 from "../image/HeaderImgOne.png";
@@ -7,6 +10,8 @@ import Gradient from "../element/Gradient";
 import Navigation from "../pages/Navigation";
 
 const Header = () => {
+  const router = useSelector((state) => state.router.location.pathname);
+  console.log(router); //intro/xxx
   return (
     <>
       <IMG height="420" src={headerimg1}>
@@ -29,13 +34,41 @@ const Header = () => {
           endLinear="100%"
         >
           <ListWrap>
-          <ListParent>
-            <List>CEO 인삿말</List>
-            <List>연혁</List>
-            <List>조직도</List>
-            <List>CI 소개</List>
-            <List>찾아오시는 길</List>
-          </ListParent>
+            <ListParent>
+              {router === "/intro/greeting" ? (
+                <List onClick={() => window.location.pathname = "/intro/greeting"}>
+                  CEO 인삿말
+                </List>
+              ) : (
+                <ListNone onClick={() => window.location.pathname = "/intro/greeting"}>CEO 인삿말</ListNone>
+              )}
+              {router === "/intro/history" ? (
+                <List onClick={() => window.location.pathname = "/intro/history"}>연혁</List>
+              ) : (
+                <ListNone onClick={() => window.location.pathname = "/intro/history"}>연혁</ListNone>
+              )}
+              {router === "/intro/officetree" ? (
+                <List onClick={() => window.location.pathname = "/intro/officetree"}>
+                  조직도
+                </List>
+              ) : (
+                <ListNone onClick={() => window.location.pathname = "/intro/officetree"}>조직도</ListNone>
+              )}
+              {router === "/intro/CIintro" ? (
+                <List onClick={() => window.location.pathname = "/intro/CIintro"}>
+                  CI 소개
+                </List>
+              ) : (
+                <ListNone onClick={() => window.location.pathname = "/intro/CIintro"}>CI 소개</ListNone>
+              )}
+              {router === "/intro/map" ? (
+                <List onClick={() => window.location.pathname = "/intro/map"}>
+                  찾아오시는 길
+                </List>
+              ) : (
+                <ListNone onClick={() => window.location.pathname = "/intro/map"}>찾아오시는 길</ListNone>
+              )}
+            </ListParent>
           </ListWrap>
         </Gradient>
       </IMG>
@@ -56,28 +89,40 @@ const IMG = styled.div`
 `;
 
 const TopGrad = styled.div`
-width: 100vw;
-height: 100px;
-position: absolute;
-top:0;
-background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, #000000 100%); ;
-`
+  width: 100vw;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, #000000 100%); ;
+`;
 
 const ListParent = styled.ul`
-color: #fff;
-list-style: none;
-display: inline-flex;
-line-height: 100px;
-padding: 0 800px 0 0;
-`
+  color: #fff;
+  list-style: none;
+  display: inline-flex;
+  /* line-height: 100px; */
+  padding: 0 800px 0 0;
+`;
 
 const List = styled.li`
-margin: 0 20px;
-`
+  padding: 0px 20px 10px 20px;
+  margin: 0px 20px;
+  padding-top: 50px;
+  border-bottom: 4px solid #3180f1;
+`;
+
+const ListNone = styled.li`
+  padding: 0px 20px 10px 20px;
+  margin: 0px 20px;
+  padding-top: 50px;
+  cursor: pointer;
+`;
+
 const ListWrap = styled.div`
-display: flex;
-justify-content: center;
-align-items: center;
-`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+`;
 
 export default Header;
