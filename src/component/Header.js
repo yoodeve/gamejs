@@ -1,6 +1,5 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { history } from "../modules/configStore";
 
 import styled from "styled-components";
 

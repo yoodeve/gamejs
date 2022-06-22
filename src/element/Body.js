@@ -6,7 +6,6 @@ const Body = ({ children }) => {
 };
 
 const Flex = styled.div`
-  /* height: 1200px; */
   justify-content: center;
   display: flex;
   background-color: #fff;
