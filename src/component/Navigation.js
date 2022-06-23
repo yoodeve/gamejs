@@ -29,7 +29,14 @@ const Navigation = (props) => {
               setDropIntro(!dropIntro);
             }}
           >
-            <div className="for-hover">회사 소개</div>
+            <div
+              onClick={() => {
+                window.location.pathname = "/intro";
+              }}
+              className="for-hover"
+            >
+              회사 소개
+            </div>
             <Dropdown drop={dropIntro}>
               <ul>
                 {/* <li className="list-head">회사 소개</li> */}
@@ -72,7 +79,7 @@ const Navigation = (props) => {
             </Dropdown>
           </div>
 
-          <div
+          {/* <div
             className="mainNavTxt"
             onMouseEnter={() => setDropServe(!dropServ)}
             onMouseLeave={() => setDropServe(!dropServ)}
@@ -80,12 +87,11 @@ const Navigation = (props) => {
             <div className="for-hover">서비스</div>
             <Dropdown drop={dropServ}>
               <ul>
-                <li className="list-head">서비스</li>
                 <li>웹개발</li>
                 <li>App 개발</li>
               </ul>
             </Dropdown>
-          </div>
+          </div> */}
 
           <div
             className="mainNavTxt"
@@ -95,7 +101,6 @@ const Navigation = (props) => {
             <div className="for-hover">포트폴리오</div>
             <Dropdown drop={dropPort}>
               <ul>
-                <li className="list-head">포트폴리오</li>
                 <li>포트폴리오</li>
               </ul>
             </Dropdown>
@@ -108,7 +113,6 @@ const Navigation = (props) => {
             <div className="for-hover">문의 &amp; 의뢰</div>
             <Dropdown drop={dropReq}>
               <ul>
-                <li className="list-head">문의 &amp; 의뢰</li>
                 <li>CEO 인사말</li>
                 <li>연혁</li>
                 <li>조직도</li>
@@ -123,7 +127,6 @@ const Navigation = (props) => {
             <div className="for-hover">인재 채용</div>
             <Dropdown drop={dropHire}>
               <ul>
-                <li className="list-head">인재 채용</li>
                 <li>CEO 인사말</li>
                 <li>연혁</li>
                 <li>조직도</li>
@@ -141,7 +144,6 @@ const Navigation = (props) => {
 
 const Wrap = styled.div`
   ${(props) => (props.absolute ? `justify-content:center;` : "")}
-  
 `;
 
 export default Navigation;

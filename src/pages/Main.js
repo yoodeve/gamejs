@@ -4,7 +4,7 @@ import Gradient from "../element/Gradient";
 
 import back from "../image/back.png";
 import logo from "../image/logo.png";
-import Navigation from "./Navigation";
+import Navigation from "../component/Navigation";
 
 const Main = () => {
   return (

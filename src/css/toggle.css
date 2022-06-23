@@ -16,7 +16,7 @@
 .slide-fade-in-dropdown {
   overflow: hidden;
   width: inherit;
-  position: absolute;
+  /* position: absolute; */
   /* top: 0; */
 }
 
@@ -53,12 +53,21 @@
 .mainNavAuto {
   display: flex;
   justify-content: center;
-  padding-top: 10px;
+  /* padding-top: 10px; */
+}
+
+.mainNavTxt {
+  color: #fff;
+  width: 200px;
+  height: 48px;
+  /* margin: 20px 0; */
+  text-align: center;
 }
 
 .for-hover {
   /* line-height: 30px; */
   color: #fff;
+  padding:10px 0px
 }
 
 .mainNavTxt:hover .for-hover {
@@ -67,7 +76,7 @@
   height: 30px;
   /* line-height: 30px; */
   color: #fff;
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 600;
   display: flex;
   justify-content: center;
@@ -75,13 +84,6 @@
   transition: all 0.2s linear;
 }
 
-.mainNavTxt {
-  color: #fff;
-  width: 200px;
-  height: 48px;
-  /* margin: 20px; */
-  text-align: center;
-}
 
 .list-head {
   font-weight: 700;

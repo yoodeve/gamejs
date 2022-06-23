@@ -6,7 +6,7 @@ import styled from "styled-components";
 import headerimg1 from "../image/HeaderImgOne.png";
 import smallLogo from "../image/smallLogo.png";
 import Gradient from "../element/Gradient";
-import Navigation from "../pages/Navigation";
+import Navigation from "./Navigation";
 
 const Header = () => {
   const router = useSelector((state) => state.router.location.pathname);
@@ -18,6 +18,9 @@ const Header = () => {
           <Navigation absolute />
         </TopGrad>
         <IMG
+          onClick={() => {
+            window.location.pathname="/";
+          }}
           z="1"
           width="150"
           height="38"
@@ -35,37 +38,71 @@ const Header = () => {
           <ListWrap>
             <ListParent>
               {router === "/intro/greeting" ? (
-                <List onClick={() => window.location.pathname = "/intro/greeting"}>
+                <List
+                  onClick={() => (window.location.pathname = "/intro/greeting")}
+                >
                   CEO 인삿말
                 </List>
               ) : (
-                <ListNone onClick={() => window.location.pathname = "/intro/greeting"}>CEO 인삿말</ListNone>
+                <ListNone
+                  onClick={() => (window.location.pathname = "/intro/greeting")}
+                >
+                  CEO 인삿말
+                </ListNone>
               )}
               {router === "/intro/history" ? (
-                <List onClick={() => window.location.pathname = "/intro/history"}>연혁</List>
+                <List
+                  onClick={() => (window.location.pathname = "/intro/history")}
+                >
+                  연혁
+                </List>
               ) : (
-                <ListNone onClick={() => window.location.pathname = "/intro/history"}>연혁</ListNone>
+                <ListNone
+                  onClick={() => (window.location.pathname = "/intro/history")}
+                >
+                  연혁
+                </ListNone>
               )}
               {router === "/intro/officetree" ? (
-                <List onClick={() => window.location.pathname = "/intro/officetree"}>
+                <List
+                  onClick={() =>
+                    (window.location.pathname = "/intro/officetree")
+                  }
+                >
                   조직도
                 </List>
               ) : (
-                <ListNone onClick={() => window.location.pathname = "/intro/officetree"}>조직도</ListNone>
+                <ListNone
+                  onClick={() =>
+                    (window.location.pathname = "/intro/officetree")
+                  }
+                >
+                  조직도
+                </ListNone>
               )}
               {router === "/intro/CIintro" ? (
-                <List onClick={() => window.location.pathname = "/intro/CIintro"}>
+                <List
+                  onClick={() => (window.location.pathname = "/intro/CIintro")}
+                >
                   CI 소개
                 </List>
               ) : (
-                <ListNone onClick={() => window.location.pathname = "/intro/CIintro"}>CI 소개</ListNone>
+                <ListNone
+                  onClick={() => (window.location.pathname = "/intro/CIintro")}
+                >
+                  CI 소개
+                </ListNone>
               )}
               {router === "/intro/map" ? (
-                <List onClick={() => window.location.pathname = "/intro/map"}>
+                <List onClick={() => (window.location.pathname = "/intro/map")}>
                   찾아오시는 길
                 </List>
               ) : (
-                <ListNone onClick={() => window.location.pathname = "/intro/map"}>찾아오시는 길</ListNone>
+                <ListNone
+                  onClick={() => (window.location.pathname = "/intro/map")}
+                >
+                  찾아오시는 길
+                </ListNone>
               )}
             </ListParent>
           </ListWrap>
@@ -76,6 +113,7 @@ const Header = () => {
 };
 
 const IMG = styled.div`
+cursor: pointer;
   z-index: ${(props) => (props.z ? `${props.z};` : "")};
   background-image: url("${(props) => props.src}");
   width: ${(props) => (props.width ? `${props.width}px;` : "100vw")};
@@ -101,7 +139,7 @@ const ListParent = styled.ul`
   display: inline-flex;
   /* line-height: 100px; */
   padding: 44px 400px 0 0;
-  `;
+`;
 
 const List = styled.li`
   padding: 0px 20px 0px 20px;

@@ -16,7 +16,7 @@ const Footer = () => {
 const FooterWrapper = styled.div`
 height: 130px;
 width: 100vw;
-margin-top: -10px;
+/* margin-top: -10px; */
 background-color: #212121;
 justify-content: center;
 align-items: center;

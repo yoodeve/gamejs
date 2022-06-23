@@ -51,15 +51,15 @@ const Hello = () => {
 };
 
 const PWrapper = styled.div`
-  /* display: flex;
-  justify-content: center; */
   background-image: url("${(props) => props.src}");
   height: 100vh;
   background-repeat: no-repeat;
+  background-position: bottom;
+  padding-top: 10vh;
 `;
 const PBody = styled.p`
-  width: 25vw;
-  margin-right: 50px;
+  width: 35vw;
+  margin-right: 40px;
 `;
 const CEOImg = styled.img`
   margin-left: 40px;
@@ -73,7 +73,5 @@ const BuildingImg = styled.div`
   margin-top: auto;
 `;
 
-// greeting:building
-//intro:empty box
 
 export default Hello;

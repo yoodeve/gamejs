@@ -17,7 +17,7 @@ const CI = () => {
       <Flex>
         <Wrap>
           <H3>CI 소개</H3>
-          <p>
+          <PBody>
             게임인스의 CI는 IT 웹 개발 전문 기업으로서<br />  전문성과 도전정신을
             표현하였습니다.<br /> <br />
             곡선과 직선을 결합해 부드러움과 힘 있게 뻗어나가는
@@ -25,7 +25,7 @@ const CI = () => {
             나타내었습니다. 또한 틀에 박혀있지 않고, 자유로움과 힘 있는<br /> 이미지를
             전달하는 Blue 색상과 Black 색상을 통해 힘 있게 뻗어나갈 수 있는
             기업임을 표현하였습니다.
-          </p>
+          </PBody>
           <H4>Corporate Logo</H4>
           <Display>
             <Image src={collogo}></Image>
@@ -64,16 +64,20 @@ const Wrap = styled.div`
 `;
 
 const H3 = styled.p`
-  text-align: left;
+  text-align: center;
   font-size: 22px;
   font-weight: 700;
 `;
 
+const PBody = styled.p`
+text-align: center;
+`
+
 const H4 = styled.p`
-  text-align: left;
+  text-align: center;
   font-size: 18px;
   font-weight: 700;
-  padding-top: px;
+  padding-top: 20px;
 `;
 
 const Image = styled.img`
