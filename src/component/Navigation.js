@@ -3,7 +3,9 @@ import Dropdown from "../element/Dropdown";
 import "../css/toggle.css";
 import styled from "styled-components";
 
-const Navigation = (props) => {
+// import hbgBtn from "../image/hamburgerBtn.png";
+
+const Navigation = (props, toggleMenu) => {
   const { absolute } = props;
 
   const styles = {
@@ -11,7 +13,7 @@ const Navigation = (props) => {
   };
 
   const [dropIntro, setDropIntro] = useState(false);
-  const [dropServ, setDropServe] = useState(false);
+  // const [dropServ, setDropServe] = useState(false);
   const [dropPort, setDropPort] = useState(false);
   const [dropReq, setDropReq] = useState(false);
   const [dropHire, setDropHire] = useState(false);
@@ -99,11 +101,11 @@ const Navigation = (props) => {
             onMouseLeave={() => setDropPort(!dropPort)}
           >
             <div className="for-hover">포트폴리오</div>
-            <Dropdown drop={dropPort}>
+            {/* <Dropdown drop={dropPort}>
               <ul>
                 <li>포트폴리오</li>
               </ul>
-            </Dropdown>
+            </Dropdown> */}
           </div>
           <div
             className="mainNavTxt"
@@ -111,13 +113,13 @@ const Navigation = (props) => {
             onMouseLeave={() => setDropReq(!dropReq)}
           >
             <div className="for-hover">문의 &amp; 의뢰</div>
-            <Dropdown drop={dropReq}>
+            {/* <Dropdown drop={dropReq}>
               <ul>
                 <li>CEO 인사말</li>
                 <li>연혁</li>
                 <li>조직도</li>
               </ul>
-            </Dropdown>
+            </Dropdown> */}
           </div>
           <div
             className="mainNavTxt"
@@ -125,7 +127,7 @@ const Navigation = (props) => {
             onMouseLeave={() => setDropHire(!dropHire)}
           >
             <div className="for-hover">인재 채용</div>
-            <Dropdown drop={dropHire}>
+            {/* <Dropdown drop={dropHire}>
               <ul>
                 <li>CEO 인사말</li>
                 <li>연혁</li>
@@ -134,9 +136,10 @@ const Navigation = (props) => {
                 <li>CI 소개</li>
                 <li>찾아오시는 길</li>
               </ul>
-            </Dropdown>
+            </Dropdown> */}
           </div>
         </div>
+        {/* <Image onClick={toggleMenu} src={hbgBtn} /> */}
       </div>
     </Wrap>
   );
@@ -144,6 +147,13 @@ const Navigation = (props) => {
 
 const Wrap = styled.div`
   ${(props) => (props.absolute ? `justify-content:center;` : "")}
+  position: relative;
+`;
+const Image = styled.img`
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px;
 `;
 
 export default Navigation;

@@ -10,7 +10,6 @@ import Navigation from "./Navigation";
 
 const Header = () => {
   const router = useSelector((state) => state.router.location.pathname);
-  console.log(router); //intro/xxx
   return (
     <>
       <IMG height="420" src={headerimg1}>
@@ -19,7 +18,7 @@ const Header = () => {
         </TopGrad>
         <IMG
           onClick={() => {
-            window.location.pathname="/";
+            window.location.pathname = "/";
           }}
           z="1"
           width="150"
@@ -37,17 +36,30 @@ const Header = () => {
         >
           <ListWrap>
             <ListParent>
+            {router === "/intro" ? (
+                <List
+                  onClick={() => (window.location.pathname = "/intro")}
+                >
+                  회사소개
+                </List>
+              ) : (
+                <ListNone
+                  onClick={() => (window.location.pathname = "/intro")}
+                >
+                  회사소개
+                </ListNone>
+              )}
               {router === "/intro/greeting" ? (
                 <List
                   onClick={() => (window.location.pathname = "/intro/greeting")}
                 >
-                  CEO 인삿말
+                  CEO 인사말
                 </List>
               ) : (
                 <ListNone
                   onClick={() => (window.location.pathname = "/intro/greeting")}
                 >
-                  CEO 인삿말
+                  CEO 인사말
                 </ListNone>
               )}
               {router === "/intro/history" ? (
@@ -113,7 +125,7 @@ const Header = () => {
 };
 
 const IMG = styled.div`
-cursor: pointer;
+  cursor: pointer;
   z-index: ${(props) => (props.z ? `${props.z};` : "")};
   background-image: url("${(props) => props.src}");
   width: ${(props) => (props.width ? `${props.width}px;` : "100vw")};
@@ -130,7 +142,7 @@ const TopGrad = styled.div`
   height: 100px;
   position: absolute;
   top: 0;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, #000000 100%); ;
+  background: linear-gradient(0deg, rgba(ㄹ0, 0, 0, 0) 0%, #000000 100%); ;
 `;
 
 const ListParent = styled.ul`
@@ -138,16 +150,16 @@ const ListParent = styled.ul`
   list-style: none;
   display: inline-flex;
   /* line-height: 100px; */
-  padding: 44px 400px 0 0;
+  padding: 47px 350px 0 0;
 `;
 
 const List = styled.li`
-  padding: 0px 20px 0px 20px;
-  margin: 0px 20px;
+  padding: 0px 20px;
+  margin: 0px 16px;
   /* padding-top: 50px; */
   border-bottom: 4px solid #3180f1;
   font-family: ibmBold;
-  font-size: 20px;
+  font-size: 1.2rem;
 `;
 
 const ListNone = styled.li`
@@ -156,7 +168,7 @@ const ListNone = styled.li`
   /* padding-top: 50px; */
   cursor: pointer;
   font-family: ibmBold;
-  font-size: 20px;
+  font-size: 1.2rem;
 `;
 
 const ListWrap = styled.div`

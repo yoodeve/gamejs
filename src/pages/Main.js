@@ -3,16 +3,19 @@ import styled from "styled-components";
 import Gradient from "../element/Gradient";
 
 import back from "../image/back.png";
-import logo from "../image/logo.png";
+import logo from "../image/smallLogo.png";
+
+import SideBar from "../component/SideBar";
 import Navigation from "../component/Navigation";
 
-const Main = () => {
+const Main = (toggleMenu) => {
   return (
     <>
+    <SideBar />
       <MainWrap>
         <TopGrad>
           <LogoDiv src={logo} />
-          <Navigation absolute />
+          <Navigation toggleMenu={toggleMenu} absolute />
         </TopGrad>
 
         <IMG src={back} />
@@ -43,9 +46,9 @@ const TopGrad = styled.div`
 `;
 
 const LogoDiv = styled.div`
-  height: 54px;
-  width: 220.87px;
-  margin: 30px;
+  height: 38px;
+  width: 150px;
+  margin: 20px;
   background-image: url("${(props) => props.src}");
   z-index: 1;
   position: absolute;
