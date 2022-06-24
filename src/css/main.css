@@ -1,0 +1,37 @@
+.main-wrap {
+width: 100vw;
+  height: 100vh;
+}
+
+.top-grad {
+    width: 100vw;
+  height: 296px;
+  /* position: absolute; */
+  /* top: 0; */
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+}
+
+.logo-div {
+    height: 38px;
+  width: 150px;
+  margin: 20px;
+  background-image: url('../image/smallLogo.png');
+  z-index: 1;
+  position: absolute;
+  top: 0;
+}
+
+.bckgrnd {
+    z-index: -1;
+  display: flex;
+  /* background-image: url(src); */
+  /* width: 100vw; */
+  /* height: 100vh; */
+  position: fixed;
+  top: 0;
+  background-repeat: no-repeat;
+}
+
+.bckgrnd {
+    
+}
