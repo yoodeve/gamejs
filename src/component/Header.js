@@ -14,7 +14,7 @@ const Header = () => {
     <>
       <IMG height="420" src={headerimg1}>
         <TopGrad>
-          <Navigation absolute />
+          <Navigation />
         </TopGrad>
         <IMG
           onClick={() => {

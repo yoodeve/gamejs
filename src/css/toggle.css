@@ -1,3 +1,12 @@
+.wrap {
+  justify-content: center;
+  position: relative;
+}
+
+.hide {
+  height: 0;
+}
+
 /* fade in */
 @keyframes slide-fade-in-dropdown-animation {
   0% {
@@ -126,15 +135,6 @@
   background: #2872DD;
   font-weight: 600;
 }
-/* 
-.bckgrnd {
-  opacity: 1;
-  transition: opacity 0.5s;
-}
-
-.mainNavTxt:hover .bckgrnd{
-  opacity: 1;
-} */
 
 .back {
   background-image: url('../image/IntroWall.png');
@@ -167,10 +167,14 @@
   background-repeat: no-repeat;
   transition: all 0.3s;
 }
-.hireStaff {
+
+.hire-staff {
   background-image: url('../image/back.png');
   width: 100vw;
   height: 100vh;
   background-repeat: no-repeat;
   transition: all 0.3s ease;
+}
+.defaultback{
+  position: absolute;
 }
