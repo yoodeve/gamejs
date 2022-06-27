@@ -2,13 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import Gradient from "../element/Gradient";
 
-import '../css/main.css';
+import "../css/main.css";
 
 import back from "../image/back.png";
 import logo from "../image/smallLogo.png";
-import intro from "../image/IntroWall.png";
-import port from '../image/PortWall.png';
-import req from '../image/ReqWall.png';
 
 import SideBar from "../component/SideBar";
 import Navigation from "../component/Navigation";
@@ -16,13 +13,11 @@ import Navigation from "../component/Navigation";
 const Main = (toggleMenu) => {
   return (
     <>
-      <SideBar />
+      {/* <SideBar /> */}
       <div className="main-wrap">
-        <div className="top-grad">
-          <div className="logo-div" src={logo} />
-          <Navigation toggleMenu={toggleMenu} absolute />
-        </div>
-        <img className="bckgrnd" src={back} />
+        <div className="top-grad" />
+        <div className="logo-div" src={logo} />
+        <Navigation toggleMenu={toggleMenu} absolute />
         <Gradient
           position="absolute"
           margin="auto"

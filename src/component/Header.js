@@ -142,7 +142,7 @@ const TopGrad = styled.div`
   height: 100px;
   position: absolute;
   top: 0;
-  background: linear-gradient(0deg, rgba(ㄹ0, 0, 0, 0) 0%, #000000 100%); ;
+  background: linear-gradient(0deg, rgba(ㄹ0, 0, 0, 0) 0%, #000000 100%);
 `;
 
 const ListParent = styled.ul`

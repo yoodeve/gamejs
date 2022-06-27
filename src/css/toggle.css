@@ -51,6 +51,7 @@
   animation-fill-mode: forwards;
   cursor: pointer;
 }
+
 /* 
 .main-nav-display {
   display: flex;
@@ -69,6 +70,7 @@
   height: 48px;
   /* margin: 20px 0; */
   text-align: center;
+  z-index: 2;
 }
 
 .for-hover {
@@ -116,10 +118,59 @@
   margin: 0;
   padding: 0;
   /* transition: all 0.2s linear; */
+  
 }
 
 
 .components-dropdown > ul > li:hover {
   background: #2872DD;
   font-weight: 600;
+}
+/* 
+.bckgrnd {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.mainNavTxt:hover .bckgrnd{
+  opacity: 1;
+} */
+
+.back {
+  background-image: url('../image/IntroWall.png');
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  transition: all 0.3s;
+}
+
+.intro {
+  background-image: url('../image/IntroWall.png');
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  transition: all 0.3s;
+}
+
+.portfolio {
+  background-image: url('../image/PortWall.png');
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  transition: all 0.3s;
+}
+
+.request {
+  background-image: url('../image/ReqWall.png');
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  transition: all 0.3s;
+}
+.hireStaff {
+  background-image: url('../image/back.png');
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  transition: all 0.3s ease;
 }
