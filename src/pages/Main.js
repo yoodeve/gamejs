@@ -1,4 +1,4 @@
-import Reac, { useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Gradient from "../element/Gradient";
 
@@ -15,36 +15,25 @@ import Navigation from "../component/Navigation";
 const Main = (toggleMenu) => {
   const [backgrnd, setBackgrnd] = useState("back");
 
-  function f2(){
-    console.log("test");
-    console.log(document.querySelectorAll(".defaultback")[0].classList);
-    document.querySelectorAll(".defaultback")[0].classList.remove("back");
-    document.querySelectorAll(".defaultback")[0].classList.add("intro");
-  }
-
   return (
     <>
       {/* <SideBar /> */}
-      
+
       <div className="main-wrap">
         <div className={backgrnd + " defaultback"}>
-          
           <div className="top-grad" />
           <div className="logo-div" src={logo} />
           <Gradient
-          position="absolute"
-          margin="auto"
-          bottom="0"
-          height="296px"
-          beginLinear="0%"
-          endLinear="100%"
+            position="absolute"
+            margin="auto"
+            bottom="0"
+            height="296px"
+            beginLinear="0%"
+            endLinear="100%"
           />
-
         </div>
-        
-        
-        <Navigation f2={f2} toggleMenu={toggleMenu} />
-        
+
+        <Navigation toggleMenu={toggleMenu} />
       </div>
     </>
   );

@@ -6,6 +6,7 @@ import Hello from "../pages/Hello";
 import History from "../pages/History";
 import Introduction from "../pages/Introduction";
 import Main from "../pages/Main";
+import Portfolio from "../pages/Portfolio";
 import Tree from "../pages/Tree";
 import "./App.css";
 
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/intro/officetree" element={<Tree />} />
         <Route path="/intro/CIintro" element={<CI />} />
         <Route path="/intro/map" element={<FindWay />} />
+        <Route path="/portfolio" element={<Portfolio />} />
         </Routes>
     </BrowserRouter>
   );

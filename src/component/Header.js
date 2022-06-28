@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import styled from "styled-components";
 
 import headerimg1 from "../image/HeaderImgOne.png";
+import portwall from "../image/PortWall.png";
 import smallLogo from "../image/smallLogo.png";
 import Gradient from "../element/Gradient";
 import Navigation from "./Navigation";
@@ -12,7 +13,16 @@ const Header = () => {
   const router = useSelector((state) => state.router.location.pathname);
   return (
     <>
-      <IMG height="420" src={headerimg1}>
+      <IMG
+        height="420"
+        src={
+          router.includes("/intro")
+            ? headerimg1
+            : router === "/portfolio"
+            ? portwall
+            : ""
+        }
+      >
         <TopGrad>
           <Navigation />
         </TopGrad>
@@ -34,18 +44,14 @@ const Header = () => {
           beginLinear="0%"
           endLinear="100%"
         >
-          <ListWrap>
+          <ListWrap router={router}>
             <ListParent>
-            {router === "/intro" ? (
-                <List
-                  onClick={() => (window.location.pathname = "/intro")}
-                >
+              {router === "/intro" ? (
+                <List onClick={() => (window.location.pathname = "/intro")}>
                   회사소개
                 </List>
               ) : (
-                <ListNone
-                  onClick={() => (window.location.pathname = "/intro")}
-                >
+                <ListNone onClick={() => (window.location.pathname = "/intro")}>
                   회사소개
                 </ListNone>
               )}
@@ -125,6 +131,7 @@ const Header = () => {
 };
 
 const IMG = styled.div`
+background-position: center;
   cursor: pointer;
   z-index: ${(props) => (props.z ? `${props.z};` : "")};
   background-image: url("${(props) => props.src}");
@@ -158,7 +165,7 @@ const List = styled.li`
   margin: 0px 16px;
   /* padding-top: 50px; */
   border-bottom: 4px solid #3180f1;
-  font-family: ibmBold;
+  font-family: scB;
   font-size: 1.2rem;
 `;
 
@@ -167,12 +174,15 @@ const ListNone = styled.li`
   margin: 0px 20px;
   /* padding-top: 50px; */
   cursor: pointer;
-  font-family: ibmBold;
+  font-family: scB;
   font-size: 1.2rem;
 `;
 
 const ListWrap = styled.div`
-  display: flex;
+  /* 라우트 조건 추가 자리 */
+  ${(props) => {
+    return props.router.includes("intro") ? `display:flex;` : `display:none;`;
+  }}
   justify-content: center;
   align-items: center;
   text-align: center;

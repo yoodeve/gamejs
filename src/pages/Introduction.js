@@ -84,7 +84,7 @@ const Section = styled.img`
 
 const Paragraph = styled.p`
   .div-bold {
-    font-family: ibmSemiB;
+    font-family: scB;
   }
   text-align: center;
   padding-bottom: 10vh;

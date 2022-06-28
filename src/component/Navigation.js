@@ -24,7 +24,7 @@ const Navigation = () => {
     const backChange = (text) => {
       document
         .querySelectorAll(".defaultback")[0]
-        .classList.remove("back portfolio request hire-staff");
+        .classList.remove("back","portfolio","request","hire-staff");
       document.querySelectorAll(".defaultback")[0].classList.add(text);
     };
     document
@@ -159,7 +159,9 @@ const Navigation = () => {
               setBackgrnd("back");
             }}
           >
-            <div className="for-hover">포트폴리오</div>
+            <div className="for-hover" onClick={() => {
+                    window.location.pathname = "/portfolio";
+                  }}>포트폴리오</div>
             {/* <Dropdown drop={dropPort}>
               <ul>
                 <li>포트폴리오</li>
