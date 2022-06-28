@@ -71,7 +71,7 @@ const Wrap = styled.div`
 const Txt = styled.div`
   font-weight: 700;
   text-align: center;
-  margin: 20px 0;
+  margin: 20vh 0 10vh 0;
 `;
 
 const FootFlex = styled.div`

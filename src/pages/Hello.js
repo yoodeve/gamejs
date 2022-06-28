@@ -55,7 +55,7 @@ const PWrapper = styled.div`
   height: 100vh;
   background-repeat: no-repeat;
   background-position: bottom;
-  padding-top: 10vh;
+  padding-top: 20vh;
 `;
 const PBody = styled.p`
   width: 35vw;

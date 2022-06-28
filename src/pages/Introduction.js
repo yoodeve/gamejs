@@ -68,7 +68,7 @@ const Introduction = () => {
 };
 
 const Wrap = styled.div`
-  margin: 0 auto;
+  margin: 10vh auto;
 `;
 const SemiBlack =styled.div`
 background-color: #000;

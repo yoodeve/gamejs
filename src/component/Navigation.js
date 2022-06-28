@@ -10,21 +10,21 @@ import "../css/toggle.css";
 
 // import hbgBtn from "../image/hamburgerBtn.png";
 
-const Navigation = () => {
+const Navigation = (props) => {
   const [dropIntro, setDropIntro] = useState(false);
   // const [dropServ, setDropServe] = useState(false);
   const [dropPort, setDropPort] = useState(false);
   const [dropReq, setDropReq] = useState(false);
   const [dropHire, setDropHire] = useState(false);
 
-  const [backgrnd, setBackgrnd] = useState("back");
-  const router = useSelector((state) => state.router.location.pathname);
-
+  const changeSlogan = (slg) => {
+    props.setSlogan(slg);
+  }
   useEffect(() => {
     const backChange = (text) => {
       document
         .querySelectorAll(".defaultback")[0]
-        .classList.remove("back","portfolio","request","hire-staff");
+        .classList.remove("back", "portfolio", "request", "hire-staff");
       document.querySelectorAll(".defaultback")[0].classList.add(text);
     };
     document
@@ -50,7 +50,7 @@ const Navigation = () => {
     document
       .querySelectorAll(".mainNavTxt")[3]
       .addEventListener("mouseenter", function () {
-        backChange("hire-staff");
+        backChange("portfolio");
       });
     document
       .querySelectorAll(".mainNavTxt")[3]
@@ -152,16 +152,21 @@ const Navigation = () => {
             className="mainNavTxt"
             onMouseEnter={() => {
               setDropPort(!dropIntro);
-              setBackgrnd("portfolio"); //클래스네임 변경
+              changeSlogan("포트폴리오");
             }}
             onMouseLeave={() => {
               setDropPort(!dropPort);
-              setBackgrnd("back");
+              changeSlogan("회사소개페이지");
             }}
           >
-            <div className="for-hover" onClick={() => {
-                    window.location.pathname = "/portfolio";
-                  }}>포트폴리오</div>
+            <div
+              className="for-hover"
+              onClick={() => {
+                window.location.pathname = "/portfolio";
+              }}
+            >
+              포트폴리오
+            </div>
             {/* <Dropdown drop={dropPort}>
               <ul>
                 <li>포트폴리오</li>
@@ -172,11 +177,11 @@ const Navigation = () => {
             className="mainNavTxt"
             onMouseEnter={() => {
               setDropReq(!dropReq);
-              setBackgrnd("request");
+              changeSlogan("문의문의나문희");
             }}
             onMouseLeave={() => {
               setDropReq(!dropReq);
-              setBackgrnd("back");
+              changeSlogan("회사소개페이지");
             }}
           >
             <div className="for-hover">문의 &amp; 의뢰</div>
@@ -192,11 +197,11 @@ const Navigation = () => {
             className="mainNavTxt"
             onMouseEnter={() => {
               setDropHire(!dropHire);
-              setBackgrnd("hireStaff");
+              changeSlogan("채용채용");
             }}
             onMouseLeave={() => {
               setDropHire(!dropHire);
-              setBackgrnd("back");
+              changeSlogan("회사소개페이지");
             }}
           >
             <div className="for-hover">인재 채용</div>

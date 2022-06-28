@@ -6,14 +6,13 @@ import "../css/toggle.css";
 
 import "../css/main.css";
 
-import back from "../image/back.png";
 import logo from "../image/smallLogo.png";
 
-import SideBar from "../component/SideBar";
 import Navigation from "../component/Navigation";
 
 const Main = (toggleMenu) => {
   const [backgrnd, setBackgrnd] = useState("back");
+  const [slogan, setSlogan] = useState("회사소개페이지");
 
   return (
     <>
@@ -32,8 +31,13 @@ const Main = (toggleMenu) => {
             endLinear="100%"
           />
         </div>
-
-        <Navigation toggleMenu={toggleMenu} />
+        <Navigation toggleMenu={toggleMenu} setSlogan={setSlogan} />
+        <SloganWrap>
+          <Slogan>
+            <div className="big">{slogan}</div>
+            <div className="small">어쩌구저쩌구뭐라무러ㅏㅇ라</div>
+          </Slogan>
+        </SloganWrap>
       </div>
     </>
   );
@@ -82,5 +86,23 @@ const Main = (toggleMenu) => {
 //   bottom: 0;
 //   position: fixed;
 // `;
+const SloganWrap = styled.div`
+  display: flex;
+`;
+
+const Slogan = styled.div`
+  margin: 25vh 70vw 30vh auto;
+  color: #ffffff;
+  position: relative;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  .big {
+    font-size: 60px;
+  }
+  .small {
+    font-size: 24px;
+  }
+`;
 
 export default Main;
