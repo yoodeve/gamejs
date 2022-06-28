@@ -51,8 +51,6 @@
 .slide-fade-out-dropdown {
   overflow: hidden;
   width: inherit;
-  /* position: absolute; */
-  /* top: 0; */
 }
 
 .slide-fade-out-dropdown > ul {
@@ -61,23 +59,15 @@
   cursor: pointer;
 }
 
-/* 
-.main-nav-display {
-  display: flex;
-  justify-content: space-around;
-} */
-
 .mainNavAuto {
   display: flex;
   justify-content: center;
-  /* padding-top: 10px; */
 }
 
 .mainNavTxt {
   color: #fff;
   width: 160px;
   height: 48px;
-  /* margin: 20px 0; */
   text-align: center;
   z-index: 999;
 }
@@ -92,9 +82,7 @@
 
 .mainNavTxt:hover .for-hover {
   width: inherit;
-  /* padding: 5px 0; */
   height: 42px;
-  /* line-height: 30px; */
   color: #fff;
   font-weight: 700;
   display: flex;
@@ -120,14 +108,12 @@
   font-size: 0.9rem;
   line-height: 35px;
   color: #fff;
-  /* padding-top: 5px; */
   list-style: none;
   background-color: #3180f1;
   font-weight: 500;
   text-align: center;
   margin: 0;
   padding: 0;
-  /* transition: all 0.2s linear; */
 }
 
 
@@ -169,7 +155,7 @@
 }
 
 .hire-staff {
-  background-image: url('../image/back.png');
+  background-image: url('../image/hire.png');
   width: 100vw;
   height: 100vh;
   background-repeat: no-repeat;

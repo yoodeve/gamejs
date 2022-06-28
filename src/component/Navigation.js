@@ -50,7 +50,7 @@ const Navigation = (props) => {
     document
       .querySelectorAll(".mainNavTxt")[3]
       .addEventListener("mouseenter", function () {
-        backChange("portfolio");
+        backChange("hire-staff");
       });
     document
       .querySelectorAll(".mainNavTxt")[3]
@@ -58,13 +58,6 @@ const Navigation = (props) => {
         backChange("back");
       });
   });
-
-  // function f2(){
-  //   console.log("test1");
-  //   // document.querySelectorAll(".defaultback")[0].classList.remove("back");
-  //   // document.querySelectorAll(".defaultback")[0].classList.add("intro");
-
-  // }
 
   return (
     <div className="wrap">

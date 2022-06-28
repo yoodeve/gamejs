@@ -7,11 +7,11 @@ const Dropdown = (props) => {
   const [repeat, setRepeat] = React.useState(null);
 
   useEffect(() => {
-    if (props.drop) { //dropXXX가 true일 때
+    if (props.drop) {
       clearTimeout(repeat);
       setRepeat(null);
       setDropAnimation(true);
-    } else { //dropXXX가 false일 때
+    } else { 
       setRepeat(setTimeout(() => {
           setDropAnimation(false);
         },400));
