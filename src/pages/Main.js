@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Gradient from "../element/Gradient";
-
 import "../css/toggle.css";
-
 import "../css/main.css";
-
 import logo from "../image/smallLogo.png";
 
 import Navigation from "../component/Navigation";
+import Footer from "../element/Footer";
 
 const Main = (toggleMenu) => {
   const [backgrnd, setBackgrnd] = useState("back");
@@ -39,6 +37,7 @@ const Main = (toggleMenu) => {
           </Slogan>
         </SloganWrap>
       </div>
+      <Footer />
     </>
   );
 };
