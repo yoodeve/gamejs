@@ -33,8 +33,16 @@ const Header = () => {
               <Txt>P O R T</Txt>
               <SmallTxt>게임인스의 현재 진행한 작업물 입니다.</SmallTxt>
             </Flex>
+          ) : router === "/req" ? (
+            <Flex>
+              <Txt>P O R T</Txt>
+              <SmallTxt>게임인스의 현재 진행한 작업물 입니다.</SmallTxt>
+            </Flex>
           ) : (
-            ""
+            <Flex>
+              <Txt>P O R T</Txt>
+              <SmallTxt>게임인스의 현재 진행한 작업물 입니다.</SmallTxt>
+            </Flex>
           )}
 
           <TopGrad>
@@ -169,8 +177,8 @@ const IMG = styled.div`
 `;
 const Logo = styled.img`
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 20px;
+  left: 20px;
 `;
 
 const TxtBox = styled.div`
@@ -196,7 +204,7 @@ const Txt = styled.p`
 `;
 
 const SmallTxt = styled.p`
-  font-size: 30px;
+  font-size: 26px;
   text-align: center;
   padding: 0;
   margin: 5px;
@@ -244,7 +252,7 @@ const ListNone = styled.li`
 const ListWrap = styled.div`
   /* 라우트 조건 추가 자리 */
   ${(props) => {
-    return props.router.includes("intro") ? `display:flex;` : `display:none;`;
+    return props.router.includes('intro') ? `display:flex;` : `display:none;`;
   }}
   margin: 0 0 0 200px;
   position: absolute;
