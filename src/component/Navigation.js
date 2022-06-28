@@ -50,7 +50,7 @@ const Navigation = () => {
     document
       .querySelectorAll(".mainNavTxt")[3]
       .addEventListener("mouseenter", function () {
-        backChange("hire-staff");
+        backChange("portfolio");
       });
     document
       .querySelectorAll(".mainNavTxt")[3]

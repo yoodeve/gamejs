@@ -20,7 +20,7 @@
 
 .for-hover {
   font-family: scLt;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 600;
 }
 
@@ -79,7 +79,7 @@
   height: 48px;
   /* margin: 20px 0; */
   text-align: center;
-  z-index: 2;
+  z-index: 999;
 }
 
 .for-hover {
@@ -87,6 +87,7 @@
   line-height: 42px;
   color: #fff;
   padding-top:10px 0 5px 0;
+  
 }
 
 .mainNavTxt:hover .for-hover {
@@ -104,7 +105,7 @@
 
 
 .list-head {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 700;
 }
 
@@ -116,7 +117,7 @@
 
 .components-dropdown > ul > li {
   height: 32px;
-  font: 1.2rem;
+  font-size: 0.9rem;
   line-height: 35px;
   color: #fff;
   /* padding-top: 5px; */
@@ -127,7 +128,6 @@
   margin: 0;
   padding: 0;
   /* transition: all 0.2s linear; */
-  
 }
 
 

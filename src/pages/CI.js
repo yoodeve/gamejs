@@ -39,12 +39,12 @@ const CI = () => {
           <H3>컬러 시스템</H3>
           <H4> - Main Color</H4>
           <Pantone>
-            <img src={blueone} />
-            <img src={bluetwo} />
+            <img src={blueone} alt="" />
+            <img src={bluetwo} alt="" />
           </Pantone>
           <H4> - Sub Color</H4>
           <Pantone>
-            <img src={black} />
+            <img src={black} alt="" />
           </Pantone>
         </Wrap>
       </Flex>
@@ -57,7 +57,7 @@ const Flex = styled.div`
   justify-content: center;
   display: flex;
   background-color: #fff;
-  margin-top: 10vh;
+  margin-top: 20vh;
 `;
 
 const Wrap = styled.div`
