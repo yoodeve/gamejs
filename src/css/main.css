@@ -1,0 +1,28 @@
+.main-wrap {
+  width: 100vw;
+  height: 100vh;
+}
+
+.top-grad {
+  width: 100vw;
+  height: 296px;
+  /* position: absolute;
+  top: 0; */
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+  position: absolute;
+  z-index: 1;
+}
+
+.logo-div {
+  height: 38px;
+  width: 150px;
+  margin: 20px;
+  background-image: url("../image/smallLogo.png");
+  z-index: 999;
+  position: absolute;
+  top: 0;
+}
+
+
+.bckgrnd {
+}

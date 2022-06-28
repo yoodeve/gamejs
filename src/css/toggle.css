@@ -1,3 +1,12 @@
+.wrap {
+  justify-content: center;
+  position: relative;
+}
+
+.hide {
+  height: 0;
+}
+
 /* fade in */
 @keyframes slide-fade-in-dropdown-animation {
   0% {
@@ -9,10 +18,16 @@
   }
 }
 
+.for-hover {
+  font-family: scLt;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
 .slide-fade-in-dropdown {
   overflow: hidden;
   width: inherit;
-  position: absolute;
+  /* position: absolute; */
   /* top: 0; */
 }
 
@@ -46,64 +61,120 @@
   cursor: pointer;
 }
 
+/* 
+.main-nav-display {
+  display: flex;
+  justify-content: space-around;
+} */
+
 .mainNavAuto {
-  top: 0;
   display: flex;
   justify-content: center;
+  /* padding-top: 10px; */
+}
+
+.mainNavTxt {
+  color: #fff;
+  width: 160px;
+  height: 48px;
+  /* margin: 20px 0; */
+  text-align: center;
+  z-index: 2;
 }
 
 .for-hover {
-  width: inherit;
-  height: 30px;
-  line-height: 30px;
+  height: 42px;
+  line-height: 42px;
   color: #fff;
+  padding-top:10px 0 5px 0;
 }
 
 .mainNavTxt:hover .for-hover {
   width: inherit;
-  padding: 5px 0;
-  height: 30px;
-  line-height: 30px;
+  /* padding: 5px 0; */
+  height: 42px;
+  /* line-height: 30px; */
   color: #fff;
-  font-size: 18px;
-  font-weight: 600;
+  font-weight: 700;
   display: flex;
   justify-content: center;
   background-color: #0052C7;
   transition: all 0.2s linear;
 }
 
-.mainNavTxt {
-  color: #fff;
-  width: 200px;
-  height: 48px;
-  margin: 20px;
-  text-align: center;
-}
 
 .list-head {
+  font-size: 1.2rem;
   font-weight: 700;
 }
 
 .components-dropdown > ul {
   margin: 0;
   padding: 0;
+  transition: all 0.2s linear;
 }
 
 .components-dropdown > ul > li {
-  height: 30px;
-  line-height: 30px;
+  height: 32px;
+  font: 1.2rem;
+  line-height: 35px;
   color: #fff;
-  padding-top: 5px;
+  /* padding-top: 5px; */
   list-style: none;
   background-color: #3180f1;
+  font-weight: 500;
   text-align: center;
   margin: 0;
   padding: 0;
-  transition: all 0.2s linear;
+  /* transition: all 0.2s linear; */
+  
 }
 
 
 .components-dropdown > ul > li:hover {
   background: #2872DD;
+  font-weight: 600;
+}
+
+.back {
+  background-image: url('../image/IntroWall.png');
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  transition: all 0.3s;
+}
+
+.intro {
+  background-image: url('../image/IntroWall.png');
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  transition: all 0.3s;
+}
+
+.portfolio {
+  background-image: url('../image/PortWall.png');
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  transition: all 0.3s;
+}
+
+.request {
+  background-image: url('../image/ReqWall.png');
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  transition: all 0.3s;
+}
+
+.hire-staff {
+  background-image: url('../image/back.png');
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  transition: all 0.3s ease;
+}
+.defaultback{
+  position: absolute;
 }

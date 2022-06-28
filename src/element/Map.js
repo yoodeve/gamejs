@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
+
 const { kakao } = window;
 
 const Map = () => {
@@ -24,7 +25,7 @@ const Map = () => {
     marker.setMap(map);
 
     var iwContent =
-        '<div style="align-items:center; padding:5px;">백양대로 684, 게임인스 <br>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+        '<div>게임인스</div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
       iwPosition = new kakao.maps.LatLng(35.167799, 128.988791); //인포윈도우 표시 위치입니다
 
     // 인포윈도우를 생성합니다

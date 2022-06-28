@@ -1,0 +1,32 @@
+.container {
+    position: relative;
+}
+
+.side-column {
+  width: 380px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid #fff;
+}
+
+img.show-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px;
+}
+.hide {
+    display: none;
+}
+.dimmer {
+    width: calc(100vw - 380px);
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: 0.5;
+}

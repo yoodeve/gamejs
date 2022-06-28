@@ -1,32 +1,40 @@
 @font-face {
-  font-family: "ibmBold";
-  src: url("../font/IBMPlexSansKR-Bold.ttf");
+  font-family: "scBI";
+  src: url("../font/SCDream9.otf");
 }
 @font-face {
-  font-family: "ibmXlite";
-  src: url("../font/IBMPlexSansKR-ExtraLight.ttf");
+  font-family: "scHvy";
+  src: url("../font/SCDream8.otf");
 }
 @font-face {
-  font-family: "ibmLite";
-  src: url("../font/IBMPlexSansKR-Light.ttf");
+  font-family: "scEB";
+  src: url("../font/SCDream7.otf");
 }
 @font-face {
-  font-family: "ibmMed";
-  src: url("../font/IBMPlexSansKR-Medium.ttf");
+  font-family: "scB";
+  src: url("../font/SCDream6.otf");
 }
 @font-face {
-  font-family: "ibmReg";
-  src: url("../font/IBMPlexSansKR-Regular.ttf");
+  font-family: "scMed";
+  src: url("../font/SCDream5.otf");
 }
 @font-face {
-  font-family: "ibmSemiB";
-  src: url("../font/IBMPlexSansKR-SemiBold.ttf");
+  font-family: "scReg";
+  src: url("../font/SCDream4.otf");
 }
 @font-face {
-  font-family: "ibmThin";
-  src: url("../font/IBMPlexSansKR-Thin.ttf");
+  font-family: "scLt";
+  src: url("../font/SCDream3.otf");
+}
+@font-face {
+  font-family: "scEL";
+  src: url("../font/SCDream2.otf");
+}
+@font-face {
+  font-family: "scThin";
+  src: url("../font/SCDream1.otf");
 }
 
 * {
-  font-family: ibmReg;
+  font-family: scReg;
 }
