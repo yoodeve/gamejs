@@ -1,12 +1,14 @@
 import React from "react";
-import { BrowserRouter,Routes,Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CI from "../pages/CI";
 import FindWay from "../pages/FindWay";
 import Hello from "../pages/Hello";
+import Hiring from "../pages/Hiring";
 import History from "../pages/History";
 import Introduction from "../pages/Introduction";
 import Main from "../pages/Main";
 import Portfolio from "../pages/Portfolio";
+import Request from "../pages/Request";
 import Tree from "../pages/Tree";
 import "./App.css";
 
@@ -22,7 +24,9 @@ const App = () => {
         <Route path="/intro/CIintro" element={<CI />} />
         <Route path="/intro/map" element={<FindWay />} />
         <Route path="/portfolio" element={<Portfolio />} />
-        </Routes>
+        <Route path="/request" element={<Request />} />
+        <Route path="/staff" element={<Hiring />} />
+      </Routes>
     </BrowserRouter>
   );
 };

@@ -1,11 +1,14 @@
 import React from "react";
 import { useSelector } from "react-redux";
-
 import styled from "styled-components";
 
 import headerimg1 from "../image/HeaderImgOne.png";
 import portwall from "../image/PortWall.png";
 import smallLogo from "../image/smallLogo.png";
+import reqdetail from '../image/ReqDetailWall.png'
+import hiredetail from '../image/HireDetWall.png'
+
+
 import Navigation from "./Navigation";
 
 const Header = () => {
@@ -19,13 +22,17 @@ const Header = () => {
             ? headerimg1
             : router === "/portfolio"
             ? portwall
-            : ""
+            : router === "/request"
+            ? hiredetail
+            : router === '/staff'
+            ? reqdetail
+            : ''
         }
       >
         <TxtBox>
           {router.includes("/intro") ? (
             <Flex>
-              <Txt>P O R T F O L I O</Txt>
+              <Txt>P&nbsp;O&nbsp;R&nbsp;T&nbsp;F&nbsp;O&nbsp;L&nbsp;I&nbsp;O</Txt>
               <SmallTxt>게임인스의 현재 진행한 작업물 입니다.</SmallTxt>
             </Flex>
           ) : router === "/portfolio" ? (
@@ -33,15 +40,17 @@ const Header = () => {
               <Txt>P O R T</Txt>
               <SmallTxt>게임인스의 현재 진행한 작업물 입니다.</SmallTxt>
             </Flex>
-          ) : router === "/req" ? (
+          ) : router === "/request" ? (
             <Flex>
-              <Txt>P O R T</Txt>
-              <SmallTxt>게임인스의 현재 진행한 작업물 입니다.</SmallTxt>
+              <Txt>문&nbsp;의&nbsp;&amp;&nbsp;의&nbsp;뢰</Txt>
+              <SmallTxt>게임인스에게 맡겨보세요.</SmallTxt>
             </Flex>
           ) : (
             <Flex>
-              <Txt>P O R T</Txt>
-              <SmallTxt>게임인스의 현재 진행한 작업물 입니다.</SmallTxt>
+              <Txt>채&nbsp;용&nbsp;정&nbsp;보</Txt>
+              <SmallTxt>
+                사람과 감동으로 게임인스를<br /> 키워갈 인재를 기다립니다.
+              </SmallTxt>
             </Flex>
           )}
 
@@ -209,6 +218,7 @@ const SmallTxt = styled.p`
   padding: 0;
   margin: 5px;
   color: #fff;
+  font-weight: 400;
 `;
 
 const TopGrad = styled.div`
@@ -252,7 +262,7 @@ const ListNone = styled.li`
 const ListWrap = styled.div`
   /* 라우트 조건 추가 자리 */
   ${(props) => {
-    return props.router.includes('intro') ? `display:flex;` : `display:none;`;
+    return props.router.includes("intro") ? `display:flex;` : `display:none;`;
   }}
   margin: 0 0 0 200px;
   position: absolute;
