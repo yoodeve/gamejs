@@ -29,7 +29,7 @@ const Main = (toggleMenu) => {
             endLinear="100%"
           />
         </div>
-        <Navigation toggleMenu={toggleMenu} setSlogan={setSlogan} />
+        <Navigation toggleMenu={toggleMenu} setSlogan={setSlogan} setBackgrnd={setBackgrnd} />
         <SloganWrap>
           <Slogan>
             <div className="big">{slogan}</div>
@@ -98,6 +98,7 @@ const Slogan = styled.div`
   flex-direction: column;
   .big {
     font-size: 60px;
+    transition:all 3s;
   }
   .small {
     font-size: 24px;

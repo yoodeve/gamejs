@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import React, { useState } from "react";
+// import { useSelector } from "react-redux";
 import Dropdown from "../element/Dropdown";
 import "../css/toggle.css";
 // import back from "../image/back.png";
@@ -20,44 +20,48 @@ const Navigation = (props) => {
   const changeSlogan = (slg) => {
     props.setSlogan(slg);
   }
-  useEffect(() => {
-    const backChange = (text) => {
-      document
-        .querySelectorAll(".defaultback")[0]
-        .classList.remove("back", "portfolio", "request", "hire-staff");
-      document.querySelectorAll(".defaultback")[0].classList.add(text);
-    };
-    document
-      .querySelectorAll(".mainNavTxt")[1]
-      .addEventListener("mouseenter", function () {
-        backChange("portfolio");
-      });
-    document
-      .querySelectorAll(".mainNavTxt")[1]
-      .addEventListener("mouseleave", function () {
-        backChange("back");
-      });
-    document
-      .querySelectorAll(".mainNavTxt")[2]
-      .addEventListener("mouseenter", function () {
-        backChange("request");
-      });
-    document
-      .querySelectorAll(".mainNavTxt")[2]
-      .addEventListener("mouseleave", function () {
-        backChange("back");
-      });
-    document
-      .querySelectorAll(".mainNavTxt")[3]
-      .addEventListener("mouseenter", function () {
-        backChange("hire-staff");
-      });
-    document
-      .querySelectorAll(".mainNavTxt")[3]
-      .addEventListener("mouseleave", function () {
-        backChange("back");
-      });
-  });
+
+  const setBackgrnd = (back) => {
+    props.setBackgrnd(back);
+  }
+  // useEffect(() => {
+  //   const backChange = (text) => {
+  //     document
+  //       .querySelectorAll(".defaultback")[0]
+  //       .classList.remove("back", "portfolio", "request", "hire-staff");
+  //     document.querySelectorAll(".defaultback")[0].classList.add(text);
+  //   };
+  //   document
+  //     .querySelectorAll(".mainNavTxt")[1]
+  //     .addEventListener("mouseenter", function () {
+  //       backChange("portfolio");
+  //     });
+  //   document
+  //     .querySelectorAll(".mainNavTxt")[1]
+  //     .addEventListener("mouseleave", function () {
+  //       backChange("back");
+  //     });
+  //   document
+  //     .querySelectorAll(".mainNavTxt")[2]
+  //     .addEventListener("mouseenter", function () {
+  //       backChange("request");
+  //     });
+  //   document
+  //     .querySelectorAll(".mainNavTxt")[2]
+  //     .addEventListener("mouseleave", function () {
+  //       backChange("back");
+  //     });
+  //   document
+  //     .querySelectorAll(".mainNavTxt")[3]
+  //     .addEventListener("mouseenter", function () {
+  //       backChange("hire-staff");
+  //     });
+  //   document
+  //     .querySelectorAll(".mainNavTxt")[3]
+  //     .addEventListener("mouseleave", function () {
+  //       backChange("back");
+  //     });
+  // });
 
   return (
     <div className="wrap">
@@ -67,14 +71,14 @@ const Navigation = (props) => {
             className="mainNavTxt"
             onMouseEnter={() => {
               setDropIntro(!dropIntro);
-              // setBackgrnd("intro"); //클래스네임 변경
-
+               //클래스네임 변경
+               setBackgrnd('intro')
               //
               // document.querySelector(".defaultback").classList.add("intro");
             }}
             onMouseLeave={() => {
               setDropIntro(!dropIntro);
-              // setBackgrnd("bef back");
+              setBackgrnd("back");
             }}
           >
             <div
@@ -145,11 +149,13 @@ const Navigation = (props) => {
             className="mainNavTxt"
             onMouseEnter={() => {
               setDropPort(!dropIntro);
+              setBackgrnd("portfolio");
               changeSlogan("포트폴리오");
             }}
             onMouseLeave={() => {
               setDropPort(!dropPort);
               changeSlogan("회사소개페이지");
+              setBackgrnd('back')
             }}
           >
             <div
@@ -171,10 +177,12 @@ const Navigation = (props) => {
             onMouseEnter={() => {
               setDropReq(!dropReq);
               changeSlogan("문의문의나문희");
+              setBackgrnd('request')
             }}
             onMouseLeave={() => {
               setDropReq(!dropReq);
               changeSlogan("회사소개페이지");
+              setBackgrnd('back')
             }}
           >
             <div className="for-hover" onClick={() => {
@@ -192,10 +200,12 @@ const Navigation = (props) => {
             onMouseEnter={() => {
               setDropHire(!dropHire);
               changeSlogan("채용채용");
+              setBackgrnd('hire-staff')
             }}
             onMouseLeave={() => {
               setDropHire(!dropHire);
               changeSlogan("회사소개페이지");
+              setBackgrnd('back')
             }}
           >
             <div className="for-hover" onClick={() =>
