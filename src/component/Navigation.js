@@ -177,7 +177,8 @@ const Navigation = (props) => {
               changeSlogan("회사소개페이지");
             }}
           >
-            <div className="for-hover">문의 &amp; 의뢰</div>
+            <div className="for-hover" onClick={() => {
+                window.location.pathname = "/request";}}>문의 &amp; 의뢰</div>
             {/* <Dropdown drop={dropReq}>
               <ul>
                 <li>CEO 인사말</li>
@@ -197,7 +198,9 @@ const Navigation = (props) => {
               changeSlogan("회사소개페이지");
             }}
           >
-            <div className="for-hover">인재 채용</div>
+            <div className="for-hover" onClick={() =>
+                      (window.location.pathname = "/staff")
+                    }>인재 채용</div>
             {/* <Dropdown drop={dropHire}>
               <ul>
                 <li>CEO 인사말</li>
