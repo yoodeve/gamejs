@@ -20,7 +20,7 @@ const Hiring = () => {
         {/* 가로정렬 */}
         <StepDiv>
           {/* 카드 개별 */}
-          <Card top="6px">
+          <Card color='#B0CEF9'>
             {/* 카드 내 요소 묶어서 가운데정렬 */}
             <div className="wrapper">
               <div className="circle">01</div>
@@ -32,7 +32,7 @@ const Hiring = () => {
               </div>
             </div>
           </Card>
-          <Card top="11px">
+          <Card color="#81B2F9">
             <div className="circle">01</div>
             <div className="step">서류전형</div>
             <div className="desc">
@@ -41,7 +41,7 @@ const Hiring = () => {
               평가합니다.
             </div>
           </Card>
-          <Card top="16px">
+          <Card color="#5D9CF8">
             <div className="circle">01</div>
             <div className="step">실무 면접</div>
             <div className="desc">
@@ -52,7 +52,7 @@ const Hiring = () => {
               종합적으로 평가합니다.
             </div>
           </Card>
-          <Card top="21px">
+          <Card color="#5D9CF8">
             <div className="circle">01</div>
             <div className="step">최종합격</div>
             <div className="desc">
@@ -64,8 +64,6 @@ const Hiring = () => {
             </div>
           </Card>
         </StepDiv>
-        {/* 채용공고 링크 */}
-        <JobPostingList>인재 채용</JobPostingList>
         <Attention>
           <ul className="ul">
             <li className="li-head">유의사항</li>
@@ -78,25 +76,33 @@ const Hiring = () => {
             </li>
           </ul>
         </Attention>
+        {/* 채용공고 링크 */}
+        <JobPostingList>인재 채용</JobPostingList>
         <LinkSection>
+        <Portal href="https://www.jobkorea.co.kr/Recruit/GI_Read/38776183?Oem_Code=C1&logpath=1&stext=%EA%B2%8C%EC%9E%84%EC%9D%B8%EC%8A%A4&listno=1" target='_blank'>
           <LinkCard>
             <img src={jobkorea} alt="" />
             <div className="apply-btn">
               잡코리아 지원하기&nbsp;&nbsp;&nbsp;&gt;
             </div>
           </LinkCard>
+          </Portal>
+          <Portal href="https://www.saramin.co.kr/zf_user/company-info/view-inner-recruit?csn=VEUrcjd2QyswZ21PbTBYZmVqMTRrUT09" target='_blank'>
           <LinkCard>
             <img src={saramin} alt="" />
             <div className="apply-btn">
               사람인 지원하기&nbsp;&nbsp;&nbsp;&gt;
             </div>
           </LinkCard>
+          </Portal>
+          <Portal href="https://www.saramin.co.kr/zf_user/company-info/view-inner-recruit?csn=VEUrcjd2QyswZ21PbTBYZmVqMTRrUT09" target='_blank'>
           <LinkCard>
             <img src={worknet} alt="" />
             <div className="apply-btn">
               워크넷 지원하기&nbsp;&nbsp;&nbsp;&gt;
             </div>
           </LinkCard>
+          </Portal>
         </LinkSection>
         <FAQ>채용관련 문의 : 경영지원팀 010 - 9893 - 1002</FAQ>
       </Body>
@@ -132,8 +138,8 @@ const StepDiv = styled.div`
 `;
 
 const Card = styled.div`
-  border: 1px solid #000;
-  border-top: ${(props) => props.top} solid #000;
+  border: 1px solid ${(props) => props.color};
+  border-top: 10px solid ${(props) => props.color};
   width: 260px;
   height: 270px;
   margin: 30px;
@@ -144,17 +150,18 @@ const Card = styled.div`
   .circle {
     height: 68px;
     width: 68px;
-    border: 4px solid black;
+    border: 4px solid #3180F1;
     border-radius: 68px;
     text-align: center;
+    color: #3180F1;
     line-height: 73px;
     font-size: 30px;
-    font-family: scHvy;
+    font-family: scB;
     margin: 40px auto;
   }
   .step {
     text-align: center;
-    font-family: scB;
+    font-family: scMed;
     font-size: 26px;
     margin: 20px 0 20px 0;
   }
@@ -170,7 +177,7 @@ font-family: scMed;
 `
 
 const Attention = styled.div`
-  margin: 10vh 0 15vh 0;
+  margin: 5vh 0 5vh 0;
   .li-head {
     list-style: none;
     font-size: 22px;
@@ -186,6 +193,11 @@ const LinkSection = styled.div`
   display: flex;
   justify-content: space-around;
 `;
+
+const Portal = styled.a`
+text-decoration: none;
+color: #000;
+`
 
 const LinkCard = styled.div`
   display: grid;
