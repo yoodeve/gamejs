@@ -9,9 +9,12 @@ const Newquest = () => {
       <Header />
       <Wrap>
         <Title>웹사이트 제작 요청</Title>
-
         <FormBox>
-            
+        <MakeType>
+        {/* <label for=“hint“><input type=”checkbox” id=“hint” /> 힌트 포함</label> */}
+            <label><input type="checkbox" className="title" />신규제작</label>
+            <label><input type="checkbox" className="title" />리뉴얼</label>
+        </MakeType>
         </FormBox>
       </Wrap>
       <Footer />
@@ -30,13 +33,13 @@ const Title = styled.p`
   text-align: center;
 `;
 
-const FormBox = styled.span`
+const FormBox = styled.form`
   margin: 0 auto;
   justify-content: center;
   align-items: center;
 `;
 
-const RadioBtn = styled.input.attrs({ type: "radio" })`
+const checkBtn = styled.input.attrs({ type: "checkbox" })`
   width: 120px;
   height: 60px;
   border: 1px solid #d7d7d7;
@@ -47,5 +50,10 @@ const RadioBtn = styled.input.attrs({ type: "radio" })`
   &:checked {
   }
 `;
+
+const MakeType = styled.div`
+  display: flex;
+  margin-right: 10vw;
+`
 
 export default Newquest;

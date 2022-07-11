@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Gradient from "../element/Gradient";
 import "../css/toggle.css";
@@ -10,7 +10,14 @@ import Footer from "../element/Footer";
 
 const Main = (toggleMenu) => {
   const [backgrnd, setBackgrnd] = useState("back");
-  const [slogan, setSlogan] = useState("회사소개페이지");
+  const [slogan, setSlogan] = useState(
+    `마음을 움직이는 \n 스토리텔링 웹/앱 개발 기업`
+  );
+
+  // useEffect(() => {
+  //   const newBr = 
+  //   newBr.appendChild(slogan);
+  // }, []);
 
   return (
     <>
@@ -29,7 +36,11 @@ const Main = (toggleMenu) => {
             endLinear="100%"
           />
         </div>
-        <Navigation toggleMenu={toggleMenu} setSlogan={setSlogan} setBackgrnd={setBackgrnd} />
+        <Navigation
+          toggleMenu={toggleMenu}
+          setSlogan={setSlogan}
+          setBackgrnd={setBackgrnd}
+        />
         <SloganWrap>
           <Slogan>
             <div className="big">{slogan}</div>
@@ -85,6 +96,7 @@ const Main = (toggleMenu) => {
 //   bottom: 0;
 //   position: fixed;
 // `;
+
 const SloganWrap = styled.div`
   display: flex;
 `;
@@ -98,7 +110,7 @@ const Slogan = styled.div`
   flex-direction: column;
   .big {
     font-size: 60px;
-    transition:all 3s;
+    transition: all 3s;
   }
   .small {
     font-size: 24px;

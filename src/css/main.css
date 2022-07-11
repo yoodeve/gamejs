@@ -28,5 +28,6 @@
 }
 
 .big {
-  transition:all 3ss;
+  width: inherit;
+  white-space: preline;
 }

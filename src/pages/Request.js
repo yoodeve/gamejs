@@ -5,31 +5,19 @@ import Header from "../component/Header";
 import Footer from "../element/Footer";
 
 const Request = () => {
-  const [color, setColor] = useState("");
-  const click = () => {
-    setColor((color) => !color);
-  };
-  const shapeArr = ["신규제작", "리뉴얼"];
   const typeArr = ["반응형웹", "PC웹", "모바일웹", "기타"];
+  const shapeArr = ["신규제작", "리뉴얼"];
+  
+  const [color, setColor] = useState("black");
+  // const select = () => {
+  //   color === "yellow" ? setColor("red") : setColor("yellow");
+  // };
 
-  // const [selected, isSelected] = useState(false);
+  const click = () => {
+    setColor(col=>!col);
+  }
 
-  // const colorChange = (e) => {
-  //     e.preventDefault();
-  //     isSelected(!selected);
-  // }
-
-  // let [color, setColor] = useState('#fff');
-
-  // const changeColor = () => {
-  //     // console.log(color);
-  //     // return;
-  //     setColor(color? '#3180F1' : '#fff')
-  // }
-
-  // function test(){
-  //   // console.log(color);
-  // }
+  //iscategoryselect===false로 가득찬 배열
 
   return (
     <>
@@ -41,18 +29,24 @@ const Request = () => {
             <div className="title">제작 형태</div>
             <div className="button-wrap">
               {shapeArr.map((ele, i) => {
+                console.log(shapeArr);
                 return (
-                  <SelectBtn
-                    color={color}
-                    className={color ? "button-blue" : "button-white"}
-                    onClick={() => click()}
-                    key={i}
-                    id={ele}
-                  >
-                    {ele}
-                  </SelectBtn>
+                  <>
+                    {console.log(ele)}
+                    <Input key={i} type="checkbox" />
+                    <label key={i} className="choice-btn">
+                      <SelectBtn
+                        key={ele.i}
+                        color={color}
+                        onClick={click}
+                      >
+                        {ele}
+                        {console.log(color)}
+                      </SelectBtn>
+                    </label>
+                  </>
                 );
-              })}
+              })} 
 
               {/* <SelectBtn
                 color={color}
@@ -60,13 +54,13 @@ const Request = () => {
                 onClick={() => click()}
               >
                 리뉴얼
-              </SelectBtn> */}
+              </SelectBtn>
             </div>
           </MakeType>
           <MakeType>
             <div className="title">제작 타입</div>
             <div className="button-wrap">
-              <SelectBtn
+              {/* <SelectBtn
                 color={color}
                 className={color ? "button-blue" : "button-white"}
                 onClick={() => click()}
@@ -93,7 +87,7 @@ const Request = () => {
                 onClick={() => click()}
               >
                 기타
-              </SelectBtn>
+              </SelectBtn> */}
             </div>
           </MakeType>
         </Form>
@@ -114,7 +108,7 @@ const Title = styled.p`
   text-align: center;
 `;
 
-const Form = styled.div`
+const Form = styled.form`
   margin: 0 auto;
   justify-content: center;
   align-items: center;
@@ -155,7 +149,12 @@ const MakeType = styled.div`
   }
 `;
 
+const Input = styled.input`
+  display: none;
+`;
+
 const SelectBtn = styled.div`
+background-color: ${props => props.color};
   width: 120px;
   height: 60px;
   border: 1px solid #d7d7d7;

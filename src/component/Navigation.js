@@ -24,6 +24,8 @@ const Navigation = (props) => {
   const setBackgrnd = (back) => {
     props.setBackgrnd(back);
   }
+
+  
   // useEffect(() => {
   //   const backChange = (text) => {
   //     document
@@ -154,7 +156,7 @@ const Navigation = (props) => {
             }}
             onMouseLeave={() => {
               setDropPort(!dropPort);
-              changeSlogan("회사소개페이지");
+              changeSlogan("마음을 움직이는 스토리텔링 웹/앱 개발 기업");
               setBackgrnd('back')
             }}
           >
@@ -181,7 +183,7 @@ const Navigation = (props) => {
             }}
             onMouseLeave={() => {
               setDropReq(!dropReq);
-              changeSlogan("회사소개페이지");
+              changeSlogan(`마음을 움직이는 \n 스토리텔링 웹/앱 개발 기업`);
               setBackgrnd('back')
             }}
           >
@@ -204,7 +206,7 @@ const Navigation = (props) => {
             }}
             onMouseLeave={() => {
               setDropHire(!dropHire);
-              changeSlogan("회사소개페이지");
+              changeSlogan("마음을 움직이는 \n 스토리텔링 웹/앱 개발 기업");
               setBackgrnd('back')
             }}
           >
