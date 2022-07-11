@@ -26,3 +26,8 @@
 
 .bckgrnd {
 }
+
+.big {
+  width: inherit;
+  white-space: preline;
+}

@@ -10,7 +10,7 @@ const Tree = () => {
         <div>
             <Header />
             <Body margint='30vh' marginb='30vh'>
-                <img src={tree} />
+                <img src={tree} alt='' />
             </Body>
             <Footer />
         </div>

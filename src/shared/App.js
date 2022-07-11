@@ -7,6 +7,7 @@ import Hiring from "../pages/Hiring";
 import History from "../pages/History";
 import Introduction from "../pages/Introduction";
 import Main from "../pages/Main";
+import Newquest from "../pages/Newquest";
 import Portfolio from "../pages/Portfolio";
 import Request from "../pages/Request";
 import Tree from "../pages/Tree";
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/intro/map" element={<FindWay />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/request" element={<Request />} />
+        {/* <Route path="/request" element={<Newquest />} /> */}
         <Route path="/staff" element={<Hiring />} />
       </Routes>
     </BrowserRouter>
